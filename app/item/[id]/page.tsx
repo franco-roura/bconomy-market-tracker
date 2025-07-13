@@ -23,8 +23,8 @@ export default async function Home(props: Props) {
   const selectedItem = items[itemIdInt];
   let utcMidnight = new Date();
   utcMidnight.setUTCHours(0, 0, 0, 0);
-  console.log(utcMidnight);
-  const currentPrices = await db
+
+  const currentPricesPromise = db
     .selectFrom("item_price_candle")
     .selectAll()
     .where("item_id", "=", itemIdInt)
@@ -33,11 +33,16 @@ export default async function Home(props: Props) {
     .orderBy("timestamp", "asc")
     .execute();
 
-  const currentStats = await db
-    .selectFrom("live_stats")
-    .selectAll()
-    .where("item_id", "=", itemIdInt)
-    .executeTakeFirst();
+  const currentStatsPromise = db.selectFrom("live_stats").selectAll().execute();
+
+  const [currentPrices, currentStats] = await Promise.all([
+    currentPricesPromise,
+    currentStatsPromise,
+  ]);
+
+  const selectedItemStats = currentStats.find(
+    (stat) => stat.item_id === itemIdInt,
+  );
 
   return (
     <div className="container mx-auto p-6 space-y-6">
@@ -57,7 +62,10 @@ export default async function Home(props: Props) {
           </CardHeader>
           <CardContent>
             <Suspense fallback={<ItemsListLoading />}>
-              <ItemsList selectedItemId={itemIdInt} />
+              <ItemsList
+                selectedItemId={itemIdInt}
+                currentStats={currentStats}
+              />
             </Suspense>
           </CardContent>
         </Card>
@@ -92,11 +100,15 @@ export default async function Home(props: Props) {
       </div>
       <ItemStats
         itemId={itemIdInt}
-        lastKnownPrice={parseInt(currentStats?.last_known_price ?? "0")}
-        openingPrice={parseInt(currentStats?.opening_price ?? "0")}
-        highestPriceToday={parseInt(currentStats?.highest_price_today ?? "0")}
-        lowestPriceToday={parseInt(currentStats?.lowest_price_today ?? "0")}
-        supply={parseInt(currentStats?.supply ?? "0")}
+        lastKnownPrice={parseInt(selectedItemStats?.last_known_price ?? "0")}
+        openingPrice={parseInt(selectedItemStats?.opening_price ?? "0")}
+        highestPriceToday={parseInt(
+          selectedItemStats?.highest_price_today ?? "0",
+        )}
+        lowestPriceToday={parseInt(
+          selectedItemStats?.lowest_price_today ?? "0",
+        )}
+        supply={parseInt(selectedItemStats?.supply ?? "0")}
       />
     </div>
   );

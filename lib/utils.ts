@@ -16,5 +16,6 @@ export function localizeUtc(utcDate: number) {
 
 export const bcFormatter = Intl.NumberFormat("en", {
   notation: "compact",
-  minimumFractionDigits: 2,
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2,
 });
