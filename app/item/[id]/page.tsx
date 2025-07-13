@@ -1,8 +1,11 @@
 import { db } from "@/app/db/client";
 import { items } from "@/app/db/items";
+import { ItemsList } from "@/components/items-list";
+import { ItemsListLoading } from "@/components/items-list.loading";
 import { PriceChart } from "@/components/price-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { Suspense } from "react";
 
 type Props = {
   params: Promise<{
@@ -46,11 +49,9 @@ export default async function Home(props: Props) {
             <CardTitle>Select Item</CardTitle>
           </CardHeader>
           <CardContent>
-            {/* <ItemSelector
-              items={gameItems}
-              selectedItem={selectedItem}
-              onItemSelect={setSelectedItem}
-            /> */}
+            <Suspense fallback={<ItemsListLoading />}>
+              <ItemsList selectedItemId={itemIdInt} />
+            </Suspense>
           </CardContent>
         </Card>
 

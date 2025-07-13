@@ -1,4183 +1,3026 @@
 export const items = [
-    {
-        "name": "Rock",
-        "emoji": "🪨",
-        "idName": "rock",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore",
-            "mine",
-            "hunt"
-        ],
-        "recipe": [],
-        "id": 0,
-        "flatId": "item0",
-        "cost": 50,
-        "usedToCraft": [
-            16,
-            43
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faa8.svg"
-    },
-    {
-        "name": "Weeds",
-        "emoji": "🌾",
-        "idName": "weeds",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 1,
-        "flatId": "item1",
-        "cost": 75,
-        "usedToCraft": [
-            17,
-            76
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f33e.svg"
-    },
-    {
-        "name": "Discarded Butt",
-        "emoji": "🚬",
-        "idName": "discardedbutt",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 2,
-        "flatId": "item2",
-        "cost": 100,
-        "usedToCraft": [
-            22,
-            138
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f6ac.svg"
-    },
-    {
-        "name": "Rusty Knife",
-        "emoji": "🔪",
-        "idName": "rustyknife",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "desc": "Ah, yes. Rusty and dull. The tetanus is bound to get 'em if they survive the traumatic stabbing.",
-        "damageMultiplier": 1,
-        "damage": 200,
-        "id": 3,
-        "flatId": "item3",
-        "cost": 200,
-        "usedToCraft": [
-            42,
-            134
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f52a.svg"
-    },
-    {
-        "name": "Scrap Metal",
-        "emoji": "🔩",
-        "idName": "scrapmetal",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 4,
-        "flatId": "item4",
-        "cost": 250,
-        "usedToCraft": [
-            15,
-            18
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f529.svg"
-    },
-    {
-        "name": "Big Log",
-        "emoji": "🪵",
-        "idName": "biglog",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 5,
-        "flatId": "item5",
-        "cost": 300,
-        "usedToCraft": [
-            15,
-            18,
-            43,
-            127
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fab5.svg"
-    },
-    {
-        "name": "Rich Wool",
-        "emoji": "🐏",
-        "idName": "richwool",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore",
-            "hunt",
-            "item30"
-        ],
-        "recipe": [],
-        "id": 6,
-        "flatId": "item6",
-        "cost": 750,
-        "usedToCraft": [
-            65,
-            131
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f40f.svg"
-    },
-    {
-        "name": "Floppy Disk",
-        "emoji": "💾",
-        "idName": "floppydisk",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 7,
-        "flatId": "item7",
-        "cost": 1000,
-        "usedToCraft": [
-            103
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4be.svg"
-    },
-    {
-        "name": "Lightbulb",
-        "emoji": "💡",
-        "idName": "lightbulb",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 8,
-        "flatId": "item8",
-        "cost": 1500,
-        "usedToCraft": [
-            40,
-            44,
-            117,
-            133
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4a1.svg"
-    },
-    {
-        "name": "Rubber Tire",
-        "emoji": "<:rubbertire:1223831398671061054>",
-        "idName": "rubbertire",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore"
-        ],
-        "recipe": [],
-        "id": 9,
-        "flatId": "item9",
-        "cost": 7500,
-        "usedToCraft": [
-            105,
-            137
-        ],
-        "imageUrl": "/assets/game/img/items/webp/rubbertire.webp"
-    },
-    {
-        "name": "Ritual Urn",
-        "emoji": "🏺",
-        "idName": "ritualurn",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore",
-            "hunt",
-            "item84",
-            "item83"
-        ],
-        "recipe": [],
-        "id": 10,
-        "flatId": "item10",
-        "cost": 10000,
-        "usedToCraft": [
-            78,
-            115,
-            132
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f3fa.svg"
-    },
-    {
-        "name": "Ancient Fossil",
-        "emoji": "<:ancientfossil:1325553387907055646>",
-        "idName": "ancientfossil",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore",
-            "item30",
-            "item84"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "mine",
-            "duration": 900000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 11,
-        "flatId": "item11",
-        "cost": 50000,
-        "usedToCraft": [
-            77,
-            78
-        ],
-        "imageUrl": "/assets/game/img/items/webp/ancientfossil.webp"
-    },
-    {
-        "name": "Diamond",
-        "emoji": "💎",
-        "idName": "diamond",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine",
-            "item87",
-            "item141"
-        ],
-        "recipe": [],
-        "id": 12,
-        "flatId": "item12",
-        "cost": 50000,
-        "usedToCraft": [
-            36,
-            64,
-            132
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f48e.svg"
-    },
-    {
-        "name": "Old Crown",
-        "emoji": "👑",
-        "idName": "oldcrown",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore",
-            "fish",
-            "item84",
-            "item28",
-            "item30"
-        ],
-        "recipe": [],
-        "id": 13,
-        "flatId": "item13",
-        "cost": 250000,
-        "usedToCraft": [
-            115
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f451.svg"
-    },
-    {
-        "name": "Manuscript",
-        "emoji": "📜",
-        "idName": "manuscript",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "explore",
-            "item84"
-        ],
-        "recipe": [],
-        "id": 14,
-        "flatId": "item14",
-        "cost": 500000,
-        "usedToCraft": [
-            78,
-            115
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4dc.svg"
-    },
-    {
-        "name": "Chisel",
-        "emoji": "⚒️",
-        "idName": "chisel",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                5,
-                2
-            ],
-            [
-                4,
-                5
-            ]
-        ],
-        "desc": "A basic, yet versatile tool often used in crafting recipes calling for stone or bricks.",
-        "id": 15,
-        "flatId": "item15",
-        "cost": 1850,
-        "usedToCraft": [
-            16,
-            20,
-            42
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u2692.svg"
-    },
-    {
-        "name": "Bricks",
-        "emoji": "🧱",
-        "idName": "bricks",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                15,
-                1
-            ],
-            [
-                0,
-                40
-            ]
-        ],
-        "id": 16,
-        "flatId": "item16",
-        "cost": 3850,
-        "usedToCraft": [
-            20
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9f1.svg"
-    },
-    {
-        "name": "Thick Rope",
-        "emoji": "🪢",
-        "idName": "thickrope",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [
-            "item30"
-        ],
-        "recipe": [
-            [
-                1,
-                40
-            ]
-        ],
-        "id": 17,
-        "flatId": "item17",
-        "cost": 3000,
-        "usedToCraft": [
-            26,
-            43,
-            45,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faa2.svg"
-    },
-    {
-        "name": "Wooden Hull",
-        "emoji": "<:woodenhull:1223831610336739419>",
-        "idName": "woodenhull",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                5,
-                70
-            ],
-            [
-                4,
-                30
-            ]
-        ],
-        "id": 18,
-        "flatId": "item18",
-        "cost": 28500,
-        "usedToCraft": [
-            35
-        ],
-        "imageUrl": "/assets/game/img/items/webp/woodenhull.webp"
-    },
-    {
-        "name": "Steel Beam",
-        "emoji": "<:steelbeam:1325554036371361792>",
-        "idName": "steelbeam",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                92,
-                220
-            ],
-            [
-                95,
-                30
-            ]
-        ],
-        "id": 19,
-        "flatId": "item19",
-        "cost": 20000,
-        "usedToCraft": [
-            20,
-            109,
-            110
-        ],
-        "imageUrl": "/assets/game/img/items/webp/steelbeam.webp"
-    },
-    {
-        "name": "Grand Hall",
-        "emoji": "🏛️",
-        "idName": "grandhall",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                16,
-                25
-            ],
-            [
-                15,
-                8
-            ],
-            [
-                19,
-                4
-            ],
-            [
-                62,
-                4
-            ]
-        ],
-        "id": 20,
-        "flatId": "item20",
-        "cost": 309050,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f3db.svg"
-    },
-    {
-        "name": "Tough Rawhide",
-        "emoji": "<:toughrawhide:1223831297219100703>",
-        "idName": "toughrawhide",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                74,
-                5
-            ],
-            [
-                73,
-                50
-            ]
-        ],
-        "id": 21,
-        "flatId": "item21",
-        "cost": 100000,
-        "usedToCraft": [
-            65,
-            131
-        ],
-        "imageUrl": "/assets/game/img/items/webp/toughrawhide.webp"
-    },
-    {
-        "name": "Thermite",
-        "emoji": "🎇",
-        "idName": "thermite",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                2,
-                20
-            ]
-        ],
-        "desc": "A crafting ingredient, commonly used to melt and forge a variety of metal components.",
-        "id": 22,
-        "flatId": "item22",
-        "cost": 2000,
-        "usedToCraft": [
-            26,
-            27,
-            29,
-            37,
-            42,
-            62,
-            80,
-            81,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f387.svg"
-    },
-    {
-        "name": "Basic Motor",
-        "emoji": "<:basicmotor:1271475008006389761>",
-        "idName": "basicmotor",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                92,
-                250
-            ],
-            [
-                99,
-                6
-            ],
-            [
-                27,
-                4
-            ],
-            [
-                105,
-                1
-            ]
-        ],
-        "id": 23,
-        "flatId": "item23",
-        "cost": 70100,
-        "usedToCraft": [
-            107,
-            109,
-            134,
-            136
-        ],
-        "imageUrl": "/assets/game/img/items/webp/basicmotor.webp"
-    },
-    {
-        "name": "Manure",
-        "emoji": "💩",
-        "idName": "manure",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "worthPerGainedFromPetFeed": 650000,
-        "recipe": [],
-        "id": 24,
-        "flatId": "item24",
-        "cost": 12500,
-        "usedToCraft": [
-            156
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4a9.svg"
-    },
-    {
-        "name": "Hearty Burger",
-        "emoji": "🍔",
-        "idName": "heartyburger",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                33,
-                20
-            ],
-            [
-                71,
-                15
-            ],
-            [
-                114,
-                10
-            ],
-            [
-                82,
-                2
-            ]
-        ],
-        "foodTier": 3,
-        "petEnergy": 32500,
-        "id": 25,
-        "flatId": "item25",
-        "cost": 32500,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f354.svg"
-    },
-    {
-        "name": "Bomb",
-        "emoji": "💣",
-        "idName": "bomb",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                94,
-                5
-            ],
-            [
-                22,
-                3
-            ],
-            [
-                17,
-                1
-            ]
-        ],
-        "damageMultiplier": 2,
-        "damage": 20000,
-        "id": 26,
-        "flatId": "item26",
-        "cost": 10000,
-        "usedToCraft": [
-            79
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4a3.svg"
-    },
-    {
-        "name": "Aluminum Pipe",
-        "emoji": "<:aluminumpipe:1223828205870252097>",
-        "idName": "aluminumpipe",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                94,
-                20
-            ],
-            [
-                22,
-                1
-            ]
-        ],
-        "id": 27,
-        "flatId": "item27",
-        "cost": 6000,
-        "usedToCraft": [
-            23,
-            80
-        ],
-        "imageUrl": "/assets/game/img/items/webp/aluminumpipe.webp"
-    },
-    {
-        "name": "Ocean Bounty",
-        "emoji": "🎁",
-        "idName": "oceanbounty",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 100000000,
-        "recipe": [],
-        "desc": "Produces uncommon Fishing loot when used.",
-        "id": 28,
-        "flatId": "item28",
-        "cost": 250000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg"
-    },
-    {
-        "name": "Raw Plastic",
-        "emoji": "<:rawplastic:1325553988749230182>",
-        "idName": "rawplastic",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                22,
-                1
-            ],
-            [
-                99,
-                10
-            ]
-        ],
-        "id": 29,
-        "flatId": "item29",
-        "cost": 42000,
-        "usedToCraft": [
-            107,
-            109,
-            117,
-            138
-        ],
-        "imageUrl": "/assets/game/img/items/webp/rawplastic.webp"
-    },
-    {
-        "name": "Fancy Crate",
-        "emoji": "<:fancycrate:1159673904344866906>",
-        "idName": "fancycrate",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "item141"
-        ],
-        "useLimit": 5000000,
-        "recipe": [],
-        "desc": "An antique box adorned with intricate carvings. It likely contains valuable treasures and useful tools!",
-        "id": 30,
-        "flatId": "item30",
-        "cost": 150000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/fancycrate.webp"
-    },
-    {
-        "name": "Exotic Bean",
-        "emoji": "<:exoticbean:1271475092995571745>",
-        "idName": "exoticbean",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 11000,
-        "foodTier": 3,
-        "petEnergy": 150,
-        "id": 31,
-        "flatId": "item31",
-        "cost": 150,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/exoticbean.webp"
-    },
-    {
-        "name": "Soybean",
-        "emoji": "<:soybean:1159673943762948096>",
-        "idName": "soybean",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 35000,
-        "foodTier": 3,
-        "petEnergy": 500,
-        "id": 32,
-        "flatId": "item32",
-        "cost": 500,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/soybean.webp"
-    },
-    {
-        "name": "Golden Wheat",
-        "emoji": "<:wheat:1223831574773108816>",
-        "idName": "goldenwheat",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 70000,
-        "foodTier": 3,
-        "petEnergy": 1000,
-        "id": 33,
-        "flatId": "item33",
-        "cost": 1000,
-        "usedToCraft": [
-            25
-        ],
-        "imageUrl": "/assets/game/img/items/webp/wheat.webp"
-    },
-    {
-        "name": "Russet Potato",
-        "emoji": "🥔",
-        "idName": "russetpotato",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 70000,
-        "foodTier": 2,
-        "petEnergy": 1000,
-        "id": 34,
-        "flatId": "item34",
-        "cost": 1000,
-        "usedToCraft": [
-            77
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f954.svg"
-    },
-    {
-        "name": "Treated Hull",
-        "emoji": "<:treatedhull:1223831551524212827>",
-        "idName": "treatedhull",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                18,
-                1
-            ],
-            [
-                99,
-                4
-            ]
-        ],
-        "id": 35,
-        "flatId": "item35",
-        "cost": 44500,
-        "usedToCraft": [
-            36
-        ],
-        "imageUrl": "/assets/game/img/items/webp/treatedhull.webp"
-    },
-    {
-        "name": "Reinforced Hull",
-        "emoji": "<:reinforcedhull:1223831349476200519>",
-        "idName": "reinforcedhull",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                12,
-                10
-            ],
-            [
-                35,
-                1
-            ]
-        ],
-        "id": 36,
-        "flatId": "item36",
-        "cost": 544500,
-        "usedToCraft": [
-            79,
-            110,
-            113,
-            133
-        ],
-        "imageUrl": "/assets/game/img/items/webp/reinforcedhull.webp"
-    },
-    {
-        "name": "Silicon Dust",
-        "emoji": "<:silicondust:1271475464438939701>",
-        "idName": "silicondust",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                53,
-                18
-            ],
-            [
-                22,
-                1
-            ]
-        ],
-        "id": 37,
-        "flatId": "item37",
-        "cost": 20000,
-        "usedToCraft": [
-            40,
-            65,
-            108
-        ],
-        "imageUrl": "/assets/game/img/items/webp/silicondust.webp"
-    },
-    {
-        "name": "Eternal Snowflake",
-        "emoji": "❄️",
-        "idName": "eternalsnowflake",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 1,
-        "recipe": [],
-        "desc": "A crystalline formation that won't melt no matter the heat. Using it resets your Action cooldowns fully.",
-        "cooldownTime": 900000,
-        "id": 38,
-        "flatId": "item38",
-        "cost": 10000000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u2744.svg"
-    },
-    {
-        "name": "Light Suede",
-        "emoji": "<:lightsuede:1223830801599168512>",
-        "idName": "lightsuede",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                70,
-                13
-            ],
-            [
-                72,
-                8
-            ]
-        ],
-        "id": 39,
-        "flatId": "item39",
-        "cost": 12500,
-        "usedToCraft": [
-            131
-        ],
-        "imageUrl": "/assets/game/img/items/webp/lightsuede.webp"
-    },
-    {
-        "name": "Solar Panel",
-        "emoji": "<:solarpanel:1271475498391699537>",
-        "idName": "solarpanel",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                8,
-                12
-            ],
-            [
-                37,
-                6
-            ],
-            [
-                62,
-                4
-            ],
-            [
-                104,
-                5
-            ]
-        ],
-        "id": 40,
-        "flatId": "item40",
-        "cost": 263500,
-        "usedToCraft": [
-            86,
-            140
-        ],
-        "imageUrl": "/assets/game/img/items/webp/solarpanel.webp"
-    },
-    {
-        "name": "DX Coolant",
-        "emoji": "<:dxcoolant:1325553485307183195>",
-        "idName": "dxcoolant",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "desc": "The bleeding edge in superconductive cooling technology. Using this item on a Generator temporarily protects it from overheating.",
-        "id": 41,
-        "flatId": "item41",
-        "cost": 5000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/dxcoolant.webp"
-    },
-    {
-        "name": "Broadsword",
-        "emoji": "<:broadsword:1325553413072752743>",
-        "idName": "broadsword",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                93,
-                500
-            ],
-            [
-                3,
-                250
-            ],
-            [
-                22,
-                1
-            ],
-            [
-                15,
-                1
-            ]
-        ],
-        "damageMultiplier": 3,
-        "damage": 311550,
-        "id": 42,
-        "flatId": "item42",
-        "cost": 103850,
-        "usedToCraft": [
-            78,
-            135
-        ],
-        "imageUrl": "/assets/game/img/items/webp/broadsword.webp"
-    },
-    {
-        "name": "Poison Spear",
-        "emoji": "<:poisonspear:1325553942897229977>",
-        "idName": "poisonspear",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                54,
-                100
-            ],
-            [
-                5,
-                30
-            ],
-            [
-                0,
-                10
-            ],
-            [
-                17,
-                5
-            ]
-        ],
-        "damageMultiplier": 4,
-        "damage": 1098000,
-        "id": 43,
-        "flatId": "item43",
-        "cost": 274500,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/poisonspear.webp"
-    },
-    {
-        "name": "Stun Gun",
-        "emoji": "<:stungun:1325554058135736373>",
-        "idName": "stungun",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                50,
-                750
-            ],
-            [
-                104,
-                250
-            ],
-            [
-                8,
-                10
-            ],
-            [
-                63,
-                4
-            ],
-            [
-                105,
-                2
-            ]
-        ],
-        "desc": "Prank your friends by giving them a zap with this little number. It's good, clean fun, as long as you keep it above the waist and away from any mucuous membranes!",
-        "damageMultiplier": 5,
-        "damage": 6658500,
-        "id": 44,
-        "flatId": "item44",
-        "cost": 1331700,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/stungun.webp"
-    },
-    {
-        "name": "Reinforced Chain",
-        "emoji": "⛓️",
-        "idName": "reinforcedchain",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                17,
-                6
-            ],
-            [
-                95,
-                12
-            ]
-        ],
-        "id": 45,
-        "flatId": "item45",
-        "cost": 21600,
-        "usedToCraft": [
-            64,
-            109,
-            130,
-            134
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u26d3.svg"
-    },
-    {
-        "name": "Seaweed",
-        "emoji": "🌿",
-        "idName": "seaweed",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 25,
-        "id": 46,
-        "flatId": "item46",
-        "cost": 25,
-        "usedToCraft": [
-            76,
-            156
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f33f.svg"
-    },
-    {
-        "name": "Sardine",
-        "emoji": "🐟",
-        "idName": "sardine",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 50,
-        "id": 47,
-        "flatId": "item47",
-        "cost": 50,
-        "usedToCraft": [
-            76,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f41f.svg"
-    },
-    {
-        "name": "Tattered Boot",
-        "emoji": "🥾",
-        "idName": "tatteredboot",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "explore"
-        ],
-        "recipe": [],
-        "id": 48,
-        "flatId": "item48",
-        "cost": 100,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f97e.svg"
-    },
-    {
-        "name": "Prawn",
-        "emoji": "🦐",
-        "idName": "prawn",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 150,
-        "id": 49,
-        "flatId": "item49",
-        "cost": 150,
-        "usedToCraft": [
-            76
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f990.svg"
-    },
-    {
-        "name": "Jellyfish",
-        "emoji": "🪼",
-        "idName": "jellyfish",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 350,
-        "id": 50,
-        "flatId": "item50",
-        "cost": 350,
-        "usedToCraft": [
-            44,
-            76,
-            138
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fabc.svg"
-    },
-    {
-        "name": "Antique Bottle",
-        "emoji": "🍾",
-        "idName": "antiquebottle",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item30"
-        ],
-        "recipe": [],
-        "id": 51,
-        "flatId": "item51",
-        "cost": 500,
-        "usedToCraft": [
-            62,
-            128,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f37e.svg"
-    },
-    {
-        "name": "Ocean Crab",
-        "emoji": "🦀",
-        "idName": "oceancrab",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 750,
-        "id": 52,
-        "flatId": "item52",
-        "cost": 750,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f980.svg"
-    },
-    {
-        "name": "Chunky Coral",
-        "emoji": "🪸",
-        "idName": "chunkycoral",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "id": 53,
-        "flatId": "item53",
-        "cost": 1000,
-        "usedToCraft": [
-            37,
-            62
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fab8.svg"
-    },
-    {
-        "name": "Blowfish",
-        "emoji": "🐡",
-        "idName": "blowfish",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 2500,
-        "id": 54,
-        "flatId": "item54",
-        "cost": 2500,
-        "usedToCraft": [
-            43,
-            80,
-            134,
-            138
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f421.svg"
-    },
-    {
-        "name": "Electric Eel",
-        "emoji": "<:electriceel:1223830600763310092>",
-        "idName": "electriceel",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish"
-        ],
-        "recipe": [],
-        "foodTier": 2,
-        "petEnergy": 5000,
-        "id": 55,
-        "flatId": "item55",
-        "cost": 5000,
-        "usedToCraft": [
-            63
-        ],
-        "imageUrl": "/assets/game/img/items/webp/electriceel.webp"
-    },
-    {
-        "name": "Clamshell",
-        "emoji": "<:clamshell:1370436638869815366>",
-        "idName": "clamshell",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item28"
-        ],
-        "recipe": [],
-        "id": 56,
-        "flatId": "item56",
-        "cost": 10000,
-        "usedToCraft": [
-            115
-        ],
-        "imageUrl": "/assets/game/img/items/webp/clamshell.webp"
-    },
-    {
-        "name": "Great White",
-        "emoji": "🦈",
-        "idName": "greatwhite",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item28"
-        ],
-        "recipe": [],
-        "foodTier": 2,
-        "petEnergy": 25000,
-        "id": 57,
-        "flatId": "item57",
-        "cost": 25000,
-        "usedToCraft": [
-            77,
-            130
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f988.svg"
-    },
-    {
-        "name": "Ornate Necklace",
-        "emoji": "📿",
-        "idName": "ornatenecklace",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item30",
-            "item28"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "hunt",
-            "duration": 900000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 58,
-        "flatId": "item58",
-        "cost": 50000,
-        "usedToCraft": [
-            130
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4ff.svg"
-    },
-    {
-        "name": "Pearled Oyster",
-        "emoji": "🦪",
-        "idName": "pearledoyster",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item28",
-            "item141"
-        ],
-        "recipe": [],
-        "foodTier": 2,
-        "petEnergy": 100000,
-        "id": 59,
-        "flatId": "item59",
-        "cost": 100000,
-        "usedToCraft": [
-            115
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9aa.svg"
-    },
-    {
-        "name": "Treasure Chest",
-        "emoji": "<:treasurechest:1223831532678938765>",
-        "idName": "treasurechest",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item28"
-        ],
-        "recipe": [],
-        "id": 60,
-        "flatId": "item60",
-        "cost": 500000,
-        "usedToCraft": [
-            115
-        ],
-        "imageUrl": "/assets/game/img/items/webp/treasurechest.webp"
-    },
-    {
-        "name": "Giant Squid",
-        "emoji": "<:giantsquid:1325553728308121700>",
-        "idName": "giantsquid",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "fish",
-            "item28"
-        ],
-        "recipe": [],
-        "foodTier": 2,
-        "petEnergy": 1000000,
-        "id": 61,
-        "flatId": "item61",
-        "cost": 1000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/giantsquid.webp"
-    },
-    {
-        "name": "Glass Pane",
-        "emoji": "🪟",
-        "idName": "glasspane",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                51,
-                25
-            ],
-            [
-                53,
-                15
-            ],
-            [
-                22,
-                1
-            ]
-        ],
-        "id": 62,
-        "flatId": "item62",
-        "cost": 29500,
-        "usedToCraft": [
-            20,
-            40,
-            86,
-            133,
-            140
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fa9f.svg"
-    },
-    {
-        "name": "Charged Battery",
-        "emoji": "🔋",
-        "idName": "chargedbattery",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                55,
-                30
-            ],
-            [
-                104,
-                10
-            ]
-        ],
-        "id": 63,
-        "flatId": "item63",
-        "cost": 165000,
-        "usedToCraft": [
-            44,
-            86,
-            129,
-            134,
-            140
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f50b.svg"
-    },
-    {
-        "name": "Diamond Tether",
-        "emoji": "<:diamondtether:1271475065497718785>",
-        "idName": "diamondtether",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                45,
-                6
-            ],
-            [
-                12,
-                12
-            ]
-        ],
-        "id": 64,
-        "flatId": "item64",
-        "cost": 729600,
-        "usedToCraft": [
-            137
-        ],
-        "imageUrl": "/assets/game/img/items/webp/diamondtether.webp"
-    },
-    {
-        "name": "Heavy Insulation",
-        "emoji": "<:heavyinsulation:1271475190613934172>",
-        "idName": "heavyinsulation",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                6,
-                50
-            ],
-            [
-                21,
-                2
-            ],
-            [
-                37,
-                1
-            ]
-        ],
-        "id": 65,
-        "flatId": "item65",
-        "cost": 257500,
-        "usedToCraft": [
-            80,
-            110,
-            135,
-            137,
-            140
-        ],
-        "imageUrl": "/assets/game/img/items/webp/heavyinsulation.webp"
-    },
-    {
-        "name": "Feathers",
-        "emoji": "🪶",
-        "idName": "feathers",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "id": 66,
-        "flatId": "item66",
-        "cost": 50,
-        "usedToCraft": [
-            128,
-            131,
-            136
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fab6.svg"
-    },
-    {
-        "name": "Old Bones",
-        "emoji": "🦴",
-        "idName": "oldbones",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt",
-            "explore"
-        ],
-        "recipe": [],
-        "id": 67,
-        "flatId": "item67",
-        "cost": 100,
-        "usedToCraft": [
-            81,
-            132,
-            156
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9b4.svg"
-    },
-    {
-        "name": "Red Mushroom",
-        "emoji": "🍄",
-        "idName": "redmushroom",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 200,
-        "id": 68,
-        "flatId": "item68",
-        "cost": 200,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f344.svg"
-    },
-    {
-        "name": "Bird Nest",
-        "emoji": "🪺",
-        "idName": "birdnest",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 300,
-        "id": 69,
-        "flatId": "item69",
-        "cost": 300,
-        "usedToCraft": [
-            81,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faba.svg"
-    },
-    {
-        "name": "Skunk Pelt",
-        "emoji": "🦨",
-        "idName": "skunkpelt",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "id": 70,
-        "flatId": "item70",
-        "cost": 500,
-        "usedToCraft": [
-            39
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9a8.svg"
-    },
-    {
-        "name": "Prime Steak",
-        "emoji": "🥩",
-        "idName": "primesteak",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 600,
-        "id": 71,
-        "flatId": "item71",
-        "cost": 600,
-        "usedToCraft": [
-            25,
-            81,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f969.svg"
-    },
-    {
-        "name": "Badger Pelt",
-        "emoji": "🦡",
-        "idName": "badgerpelt",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "id": 72,
-        "flatId": "item72",
-        "cost": 750,
-        "usedToCraft": [
-            39
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9a1.svg"
-    },
-    {
-        "name": "Ox Pelt",
-        "emoji": "🐃",
-        "idName": "oxpelt",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt",
-            "item83"
-        ],
-        "recipe": [],
-        "id": 73,
-        "flatId": "item73",
-        "cost": 1000,
-        "usedToCraft": [
-            21
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f403.svg"
-    },
-    {
-        "name": "Buffalo Pelt",
-        "emoji": "🐂",
-        "idName": "buffalopelt",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt",
-            "item83"
-        ],
-        "recipe": [],
-        "id": 74,
-        "flatId": "item74",
-        "cost": 10000,
-        "usedToCraft": [
-            21
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f402.svg"
-    },
-    {
-        "name": "Elk Antlers",
-        "emoji": "🦌",
-        "idName": "elkantlers",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt",
-            "item83"
-        ],
-        "recipe": [],
-        "id": 75,
-        "flatId": "item75",
-        "cost": 50000,
-        "usedToCraft": [
-            77,
-            115,
-            127
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f98c.svg"
-    },
-    {
-        "name": "Seafood Salad",
-        "emoji": "🥗",
-        "idName": "seafoodsalad",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                46,
-                200
-            ],
-            [
-                1,
-                50
-            ],
-            [
-                114,
-                20
-            ],
-            [
-                119,
-                5
-            ],
-            [
-                47,
-                10
-            ],
-            [
-                49,
-                10
-            ],
-            [
-                50,
-                10
-            ]
-        ],
-        "foodTier": 2,
-        "petEnergy": 23000,
-        "id": 76,
-        "flatId": "item76",
-        "cost": 23000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f957.svg"
-    },
-    {
-        "name": "Stone Soup",
-        "emoji": "🍲",
-        "idName": "stonesoup",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                34,
-                85
-            ],
-            [
-                81,
-                1
-            ],
-            [
-                75,
-                1
-            ],
-            [
-                57,
-                1
-            ],
-            [
-                11,
-                1
-            ]
-        ],
-        "foodTier": 3,
-        "petEnergy": 268100,
-        "id": 77,
-        "flatId": "item77",
-        "cost": 268100,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f372.svg"
-    },
-    {
-        "name": "Imbued Sword",
-        "emoji": "🗡️",
-        "idName": "imbuedsword",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                10,
-                120
-            ],
-            [
-                11,
-                60
-            ],
-            [
-                14,
-                8
-            ],
-            [
-                42,
-                1
-            ]
-        ],
-        "damageMultiplier": 7,
-        "damage": 58126950,
-        "id": 78,
-        "flatId": "item78",
-        "cost": 8303850,
-        "usedToCraft": [
-            85
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f5e1.svg"
-    },
-    {
-        "name": "Pocket Rocket",
-        "emoji": "🚀",
-        "idName": "pocketrocket",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                26,
-                10000
-            ],
-            [
-                99,
-                500
-            ],
-            [
-                102,
-                40
-            ],
-            [
-                36,
-                20
-            ],
-            [
-                109,
-                8
-            ],
-            [
-                107,
-                8
-            ],
-            [
-                117,
-                1
-            ],
-            [
-                108,
-                1
-            ]
-        ],
-        "desc": "Whoever's on the receiving end of this high-precision multistage thermonuclear ICBM will not, in fact, be happy to see you. They won't see you at all, actually.",
-        "damageMultiplier": 9,
-        "damage": 1355031000,
-        "id": 79,
-        "flatId": "item79",
-        "cost": 150559000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f680.svg"
-    },
-    {
-        "name": "Sinurator",
-        "emoji": "<:sinurator:1325554012761620480>",
-        "idName": "sinurator",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                99,
-                5000
-            ],
-            [
-                54,
-                2500
-            ],
-            [
-                22,
-                100
-            ],
-            [
-                27,
-                50
-            ],
-            [
-                65,
-                10
-            ]
-        ],
-        "desc": "A thermophile's napalm-and-acid powered best friend.",
-        "damageMultiplier": 8,
-        "damage": 234600000,
-        "id": 80,
-        "flatId": "item80",
-        "cost": 29325000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/sinurator.webp"
-    },
-    {
-        "name": "Warm Broth",
-        "emoji": "🫕",
-        "idName": "warmbroth",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                82,
-                10
-            ],
-            [
-                67,
-                50
-            ],
-            [
-                71,
-                3
-            ],
-            [
-                69,
-                1
-            ],
-            [
-                94,
-                20
-            ],
-            [
-                99,
-                10
-            ],
-            [
-                22,
-                1
-            ]
-        ],
-        "foodTier": 3,
-        "petEnergy": 58100,
-        "id": 81,
-        "flatId": "item81",
-        "cost": 58100,
-        "usedToCraft": [
-            77
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fad5.svg"
-    },
-    {
-        "name": "Milk",
-        "emoji": "🥛",
-        "idName": "milk",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "hunt"
-        ],
-        "recipe": [],
-        "foodTier": 1,
-        "petEnergy": 500,
-        "id": 82,
-        "flatId": "item82",
-        "cost": 500,
-        "usedToCraft": [
-            25,
-            81,
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f95b.svg"
-    },
-    {
-        "name": "Forest Bounty",
-        "emoji": "🎁",
-        "idName": "forestbounty",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 10000000,
-        "recipe": [],
-        "desc": "Produces uncommon Hunting loot when used.",
-        "id": 83,
-        "flatId": "item83",
-        "cost": 250000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg"
-    },
-    {
-        "name": "Hillside Bounty",
-        "emoji": "🎁",
-        "idName": "hillsidebounty",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 100000000,
-        "recipe": [],
-        "desc": "Produces uncommon Exploring loot when used.",
-        "id": 84,
-        "flatId": "item84",
-        "cost": 250000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg"
-    },
-    {
-        "name": "Crystal Sword",
-        "emoji": "<:crystalsword:1325553436564914216>",
-        "idName": "crystalsword",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                111,
-                1
-            ],
-            [
-                78,
-                1
-            ]
-        ],
-        "damageMultiplier": 12,
-        "damage": 999646200,
-        "id": 85,
-        "flatId": "item85",
-        "cost": 83303850,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/crystalsword.webp"
-    },
-    {
-        "name": "Low Orbit Ion Cannon",
-        "emoji": "<:ioncannon:1325553776420982946>",
-        "idName": "loworbitioncannon",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                63,
-                50000
-            ],
-            [
-                40,
-                5000
-            ],
-            [
-                62,
-                500
-            ],
-            [
-                110,
-                50
-            ],
-            [
-                140,
-                1
-            ]
-        ],
-        "desc": "Judgement shall rain down from the heavens, and God will have had no hand in it.",
-        "damageMultiplier": 15,
-        "damage": 183396069000,
-        "id": 86,
-        "flatId": "item86",
-        "cost": 12226404600,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/ioncannon.webp"
-    },
-    {
-        "name": "Cavern Bounty",
-        "emoji": "🎁",
-        "idName": "cavernbounty",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 200000000,
-        "recipe": [],
-        "desc": "Produces uncommon Mining loot when used.",
-        "id": 87,
-        "flatId": "item87",
-        "cost": 250000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg"
-    },
-    {
-        "name": "Mysterious Sludge",
-        "emoji": "<:mysterioussludge:1325553871879405679>",
-        "idName": "mysterioussludge",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 88,
-        "flatId": "item88",
-        "cost": 10000000,
-        "usedToCraft": [
-            138,
-            157
-        ],
-        "imageUrl": "/assets/game/img/items/webp/mysterioussludge.webp"
-    },
-    {
-        "name": "Evil Tome",
-        "emoji": "<:eviltome:1223830669571002439>",
-        "idName": "eviltome",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 89,
-        "flatId": "item89",
-        "cost": 50000000,
-        "usedToCraft": [
-            139
-        ],
-        "imageUrl": "/assets/game/img/items/webp/eviltome.webp"
-    },
-    {
-        "name": "Alien Technology",
-        "emoji": "<:alientechnology:1325553337843847329>",
-        "idName": "alientechnology",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 90,
-        "flatId": "item90",
-        "cost": 50000000,
-        "usedToCraft": [
-            140
-        ],
-        "imageUrl": "/assets/game/img/items/webp/alientechnology.webp"
-    },
-    {
-        "name": "Bconomy Sourcecode",
-        "emoji": "<:sourcecode:1271475529941389363>",
-        "idName": "bconomysourcecode",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 1,
-        "recipe": [],
-        "desc": "This code seems to be buggy and untested. It'll probably corrupt your data if you try to run it! On use, duplicate any Item you own (except Lunar Shard), gaining 1,000,000,000 BC worth of it.",
-        "id": 91,
-        "flatId": "item91",
-        "cost": 1000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/sourcecode.webp"
-    },
-    {
-        "name": "Coal",
-        "emoji": "<:coal:1159673875106386012>",
-        "idName": "coal",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine"
-        ],
-        "recipe": [],
-        "id": 92,
-        "flatId": "item92",
-        "cost": 50,
-        "usedToCraft": [
-            19,
-            23
-        ],
-        "imageUrl": "/assets/game/img/items/webp/coal.webp"
-    },
-    {
-        "name": "Copper",
-        "emoji": "<:copper:1159673880110190715>",
-        "idName": "copper",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine"
-        ],
-        "recipe": [],
-        "id": 93,
-        "flatId": "item93",
-        "cost": 100,
-        "usedToCraft": [
-            42,
-            103,
-            104,
-            105
-        ],
-        "imageUrl": "/assets/game/img/items/webp/copper.webp"
-    },
-    {
-        "name": "Aluminum",
-        "emoji": "<:aluminum:1159673866529013760>",
-        "idName": "aluminum",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine"
-        ],
-        "recipe": [],
-        "id": 94,
-        "flatId": "item94",
-        "cost": 200,
-        "usedToCraft": [
-            26,
-            27,
-            81,
-            104,
-            117
-        ],
-        "imageUrl": "/assets/game/img/items/webp/aluminum.webp"
-    },
-    {
-        "name": "Iron",
-        "emoji": "<:iron:1163343248681619557>",
-        "idName": "iron",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine"
-        ],
-        "recipe": [],
-        "id": 95,
-        "flatId": "item95",
-        "cost": 300,
-        "usedToCraft": [
-            19,
-            45
-        ],
-        "imageUrl": "/assets/game/img/items/webp/iron.webp"
-    },
-    {
-        "name": "Neodymium",
-        "emoji": "<:neodymium:1163343335788924938>",
-        "idName": "neodymium",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine"
-        ],
-        "recipe": [],
-        "id": 96,
-        "flatId": "item96",
-        "cost": 400,
-        "usedToCraft": [
-            103,
-            106,
-            107
-        ],
-        "imageUrl": "/assets/game/img/items/webp/neodymium.webp"
-    },
-    {
-        "name": "Silver",
-        "emoji": "<:silver:1159673938230657025>",
-        "idName": "silver",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine",
-            "item30"
-        ],
-        "recipe": [],
-        "id": 97,
-        "flatId": "item97",
-        "cost": 500,
-        "usedToCraft": [
-            103,
-            130,
-            132
-        ],
-        "imageUrl": "/assets/game/img/items/webp/silver.webp"
-    },
-    {
-        "name": "Gold",
-        "emoji": "<:gold:1159673913668804631>",
-        "idName": "gold",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine",
-            "item30"
-        ],
-        "recipe": [],
-        "id": 98,
-        "flatId": "item98",
-        "cost": 800,
-        "usedToCraft": [
-            103,
-            105,
-            130
-        ],
-        "imageUrl": "/assets/game/img/items/webp/gold.webp"
-    },
-    {
-        "name": "Petroleum",
-        "emoji": "🛢️",
-        "idName": "petroleum",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine"
-        ],
-        "recipe": [],
-        "id": 99,
-        "flatId": "item99",
-        "cost": 4000,
-        "usedToCraft": [
-            23,
-            29,
-            35,
-            79,
-            80,
-            81,
-            133
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f6e2.svg"
-    },
-    {
-        "name": "Cobalt",
-        "emoji": "<:cobalt:1159673876318527640>",
-        "idName": "cobalt",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine",
-            "item87"
-        ],
-        "recipe": [],
-        "id": 100,
-        "flatId": "item100",
-        "cost": 50000,
-        "usedToCraft": [
-            107,
-            128
-        ],
-        "imageUrl": "/assets/game/img/items/webp/cobalt.webp"
-    },
-    {
-        "name": "Platinum",
-        "emoji": "<:platinum:1159673929963667516>",
-        "idName": "platinum",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine",
-            "item87",
-            "item141"
-        ],
-        "recipe": [],
-        "id": 101,
-        "flatId": "item101",
-        "cost": 500000,
-        "usedToCraft": [
-            108
-        ],
-        "imageUrl": "/assets/game/img/items/webp/platinum.webp"
-    },
-    {
-        "name": "Uranium",
-        "emoji": "<:uranium:1163344105192046623>",
-        "idName": "uranium",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "mine",
-            "item87"
-        ],
-        "recipe": [],
-        "id": 102,
-        "flatId": "item102",
-        "cost": 500000,
-        "usedToCraft": [
-            79,
-            110,
-            113,
-            138
-        ],
-        "imageUrl": "/assets/game/img/items/webp/uranium.webp"
-    },
-    {
-        "name": "Basic Processor",
-        "emoji": "<:basicprocessor:1223831153426042910>",
-        "idName": "basicprocessor",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                7,
-                4
-            ],
-            [
-                96,
-                8
-            ],
-            [
-                93,
-                6
-            ],
-            [
-                98,
-                2
-            ],
-            [
-                97,
-                1
-            ]
-        ],
-        "id": 103,
-        "flatId": "item103",
-        "cost": 9900,
-        "usedToCraft": [
-            106,
-            108,
-            129
-        ],
-        "imageUrl": "/assets/game/img/items/webp/basicprocessor.webp"
-    },
-    {
-        "name": "Basic Capacitor",
-        "emoji": "<:basiccapacitor:1271474980986683518>",
-        "idName": "basiccapacitor",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                93,
-                5
-            ],
-            [
-                94,
-                5
-            ]
-        ],
-        "id": 104,
-        "flatId": "item104",
-        "cost": 1500,
-        "usedToCraft": [
-            40,
-            44,
-            63,
-            108
-        ],
-        "imageUrl": "/assets/game/img/items/webp/basiccapacitor.webp"
-    },
-    {
-        "name": "Insulated Wire",
-        "emoji": "🔌",
-        "idName": "insulatedwire",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                9,
-                1
-            ],
-            [
-                93,
-                5
-            ],
-            [
-                98,
-                2
-            ]
-        ],
-        "id": 105,
-        "flatId": "item105",
-        "cost": 9600,
-        "usedToCraft": [
-            23,
-            44,
-            110,
-            140
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f50c.svg"
-    },
-    {
-        "name": "Hard Drive",
-        "emoji": "💽",
-        "idName": "harddrive",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                103,
-                1
-            ],
-            [
-                96,
-                4
-            ]
-        ],
-        "id": 106,
-        "flatId": "item106",
-        "cost": 11500,
-        "usedToCraft": [
-            136
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4bd.svg"
-    },
-    {
-        "name": "Industrial Rotor",
-        "emoji": "<:industrialcooler:1223830309410443374>",
-        "idName": "industrialrotor",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                96,
-                50
-            ],
-            [
-                100,
-                4
-            ],
-            [
-                23,
-                2
-            ],
-            [
-                29,
-                1
-            ]
-        ],
-        "id": 107,
-        "flatId": "item107",
-        "cost": 402200,
-        "usedToCraft": [
-            79,
-            110
-        ],
-        "imageUrl": "/assets/game/img/items/webp/industrialcooler.webp"
-    },
-    {
-        "name": "Advanced Processor",
-        "emoji": "<:advancedprocessor:1223831428651941980>",
-        "idName": "advancedprocessor",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                103,
-                120
-            ],
-            [
-                104,
-                100
-            ],
-            [
-                37,
-                40
-            ],
-            [
-                101,
-                3
-            ]
-        ],
-        "id": 108,
-        "flatId": "item108",
-        "cost": 3638000,
-        "usedToCraft": [
-            79,
-            136
-        ],
-        "imageUrl": "/assets/game/img/items/webp/advancedprocessor.webp"
-    },
-    {
-        "name": "Industrial Alternator",
-        "emoji": "<:industrialalternator:1271475220389298186>",
-        "idName": "industrialalternator",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                23,
-                12
-            ],
-            [
-                19,
-                10
-            ],
-            [
-                45,
-                6
-            ],
-            [
-                29,
-                4
-            ]
-        ],
-        "id": 109,
-        "flatId": "item109",
-        "cost": 1338800,
-        "usedToCraft": [
-            79,
-            110,
-            133,
-            137,
-            140
-        ],
-        "imageUrl": "/assets/game/img/items/webp/industrialalternator.webp"
-    },
-    {
-        "name": "Nuclear Reactor",
-        "emoji": "<:nuclearreactor:1325553896256569364>",
-        "idName": "nuclearreactor",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                19,
-                200
-            ],
-            [
-                36,
-                50
-            ],
-            [
-                65,
-                30
-            ],
-            [
-                102,
-                20
-            ],
-            [
-                105,
-                10
-            ],
-            [
-                107,
-                1
-            ],
-            [
-                109,
-                1
-            ]
-        ],
-        "desc": "Energy production via nuclear fission has been demonstrated to be safe, renewable and efficient! As long as you have several failsafes and a team of highly experienced nuclear engineers to run it, that is...",
-        "id": 110,
-        "flatId": "item110",
-        "cost": 50787000,
-        "usedToCraft": [
-            86,
-            113
-        ],
-        "imageUrl": "/assets/game/img/items/webp/nuclearreactor.webp"
-    },
-    {
-        "name": "Lunar Shard",
-        "emoji": "<:lunarshard:1159673884916858980>",
-        "idName": "lunarshard",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 1000000000,
-        "recipe": [],
-        "desc": "A crystal with origins unbeknownst to man. Shattering it will reveal a Rare Item. Rare Item chances are inversely weighted toward each one's base worth.",
-        "id": 111,
-        "flatId": "item111",
-        "cost": 75000000,
-        "usedToCraft": [
-            85
-        ],
-        "imageUrl": "/assets/game/img/items/webp/lunarshard.webp"
-    },
-    {
-        "name": "Magic Token",
-        "emoji": "<:magictoken:1163344472696946819>",
-        "idName": "magictoken",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "petAdventureBoostEffect": {
-            "multiplier": 10,
-            "duration": 86400000
-        },
-        "recipe": [],
-        "desc": "This elusive artifact grants transient powers to creatures of all kinds. On use, your Buddy gains a 10x multiplier to its Energy Capacity and Adventure Speed for 24 hours.",
-        "id": 112,
-        "flatId": "item112",
-        "cost": 1000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/magictoken.webp"
-    },
-    {
-        "name": "Little Brother",
-        "emoji": "<:littlebrother:1325553802077671527>",
-        "idName": "littlebrother",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                102,
-                250
-            ],
-            [
-                36,
-                250
-            ],
-            [
-                110,
-                25
-            ]
-        ],
-        "desc": "Feel free to ask non-nuclear capable friends for favors once you get your hands on this humble 100-megaton warhead. They'll be more than happy to oblige!",
-        "damageMultiplier": 10,
-        "damage": 15308000000,
-        "id": 113,
-        "flatId": "item113",
-        "cost": 1530800000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/littlebrother.webp"
-    },
-    {
-        "name": "Clover",
-        "emoji": "☘️",
-        "idName": "clover",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 35000,
-        "id": 114,
-        "flatId": "item114",
-        "cost": 250,
-        "usedToCraft": [
-            25,
-            76,
-            115,
-            132
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u2618.svg"
-    },
-    {
-        "name": "Lucky Charm",
-        "emoji": "🍀",
-        "idName": "luckycharm",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [
-            "item141"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "rareLootBoost",
-            "duration": 3600000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                114,
-                12000
-            ],
-            [
-                10,
-                100
-            ],
-            [
-                56,
-                100
-            ],
-            [
-                75,
-                20
-            ],
-            [
-                59,
-                10
-            ],
-            [
-                13,
-                4
-            ],
-            [
-                60,
-                2
-            ],
-            [
-                14,
-                2
-            ]
-        ],
-        "id": 115,
-        "flatId": "item115",
-        "cost": 10000000,
-        "usedToCraft": [
-            139
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f340.svg"
-    },
-    {
-        "name": "Neptune's Trident",
-        "emoji": "🔱",
-        "idName": "neptunestrident",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 116,
-        "flatId": "item116",
-        "cost": 10000000,
-        "usedToCraft": [
-            137
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f531.svg"
-    },
-    {
-        "name": "Sonar Dish",
-        "emoji": "📡",
-        "idName": "sonardish",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [
-            [
-                94,
-                20
-            ],
-            [
-                8,
-                10
-            ],
-            [
-                29,
-                2
-            ]
-        ],
-        "id": 117,
-        "flatId": "item117",
-        "cost": 103000,
-        "usedToCraft": [
-            79,
-            129,
-            140
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4e1.svg"
-    },
-    {
-        "name": "Obscure Sigil",
-        "emoji": "<:obscuresigil:1325553919820300460>",
-        "idName": "obscuresigil",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 1,
-        "recipe": [],
-        "desc": "Dark, unnatural energies emanate from this chaotic seal. On use, each active non-global Loot Action multiplier boost is extended by a random duration between 1-2 hours.",
-        "id": 118,
-        "flatId": "item118",
-        "cost": 1000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/obscuresigil.webp"
-    },
-    {
-        "name": "Blueberry",
-        "emoji": "🫐",
-        "idName": "blueberry",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 20000,
-        "foodTier": 2,
-        "petEnergy": 750,
-        "id": 119,
-        "flatId": "item119",
-        "cost": 750,
-        "usedToCraft": [
-            76,
-            127
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fad0.svg"
-    },
-    {
-        "name": "Strawberry",
-        "emoji": "🍓",
-        "idName": "strawberry",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 168000,
-        "foodTier": 2,
-        "petEnergy": 7500,
-        "id": 120,
-        "flatId": "item120",
-        "cost": 7500,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f353.svg"
-    },
-    {
-        "name": "Kiwi",
-        "emoji": "🥝",
-        "idName": "kiwi",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 240000,
-        "foodTier": 2,
-        "petEnergy": 12500,
-        "id": 121,
-        "flatId": "item121",
-        "cost": 12500,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f95d.svg"
-    },
-    {
-        "name": "Mango",
-        "emoji": "🥭",
-        "idName": "mango",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 480000,
-        "foodTier": 2,
-        "petEnergy": 25000,
-        "id": 122,
-        "flatId": "item122",
-        "cost": 25000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f96d.svg"
-    },
-    {
-        "name": "Melon",
-        "emoji": "🍈",
-        "idName": "melon",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 900000,
-        "foodTier": 2,
-        "petEnergy": 50000,
-        "id": 123,
-        "flatId": "item123",
-        "cost": 50000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f348.svg"
-    },
-    {
-        "name": "Coconut",
-        "emoji": "🥥",
-        "idName": "coconut",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 10800000,
-        "foodTier": 2,
-        "petEnergy": 750000,
-        "id": 124,
-        "flatId": "item124",
-        "cost": 750000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f965.svg"
-    },
-    {
-        "name": "Pumpkin",
-        "emoji": "🎃",
-        "idName": "pumpkin",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "recipe": [],
-        "growTime": 108000000,
-        "foodTier": 2,
-        "petEnergy": 7500000,
-        "id": 125,
-        "flatId": "item125",
-        "cost": 7500000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f383.svg"
-    },
-    {
-        "name": "Forbidden Knowledge",
-        "emoji": "🪬",
-        "idName": "forbiddenknowledge",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 1,
-        "recipe": [],
-        "desc": "It is said that those who acquire the Forbidden Knowledge develop an otherworldly control over eldritch beings. On use, summons a Boss at half health (with half the boss's total damage credited to the user). No base damage is credited, however, meaning the user won't receive Standard Loot unless they attack after the Boss is summoned.",
-        "id": 126,
-        "flatId": "item126",
-        "cost": 750000000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faac.svg"
-    },
-    {
-        "name": "Painted Totem",
-        "emoji": "<:paintedtotem:1271475364484485204>",
-        "idName": "paintedtotem",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [
-            "item30"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "explore",
-            "duration": 900000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                75,
-                1
-            ],
-            [
-                119,
-                5
-            ],
-            [
-                5,
-                3
-            ]
-        ],
-        "id": 127,
-        "flatId": "item127",
-        "cost": 54650,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/paintedtotem.webp"
-    },
-    {
-        "name": "Nautical Compass",
-        "emoji": "🧭",
-        "idName": "nauticalcompass",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [
-            "item30"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "fish",
-            "duration": 900000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                100,
-                1
-            ],
-            [
-                51,
-                2
-            ],
-            [
-                66,
-                1
-            ]
-        ],
-        "id": 128,
-        "flatId": "item128",
-        "cost": 51050,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9ed.svg"
-    },
-    {
-        "name": "Fish Finder",
-        "emoji": "<:fishfinder:1271475161757126799>",
-        "idName": "fishfinder",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "fish",
-            "duration": 1800000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                117,
-                1
-            ],
-            [
-                63,
-                2
-            ],
-            [
-                103,
-                10
-            ]
-        ],
-        "id": 129,
-        "flatId": "item129",
-        "cost": 532000,
-        "usedToCraft": [
-            137
-        ],
-        "imageUrl": "/assets/game/img/items/webp/fishfinder.webp"
-    },
-    {
-        "name": "Sharktooth Necklace",
-        "emoji": "<:sharktoothnecklace:1271475431417184307>",
-        "idName": "sharktoothnecklace",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "hunt",
-            "duration": 1800000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                98,
-                100
-            ],
-            [
-                97,
-                80
-            ],
-            [
-                57,
-                8
-            ],
-            [
-                45,
-                6
-            ],
-            [
-                58,
-                2
-            ]
-        ],
-        "id": 130,
-        "flatId": "item130",
-        "cost": 549600,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/sharktoothnecklace.webp"
-    },
-    {
-        "name": "Downy Parka",
-        "emoji": "🧥",
-        "idName": "downyparka",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "explore",
-            "duration": 1800000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                66,
-                2500
-            ],
-            [
-                6,
-                45
-            ],
-            [
-                39,
-                15
-            ],
-            [
-                21,
-                2
-            ]
-        ],
-        "id": 131,
-        "flatId": "item131",
-        "cost": 546250,
-        "usedToCraft": [
-            135
-        ],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9e5.svg"
-    },
-    {
-        "name": "Dowsing Rod",
-        "emoji": "<:dowsingrod:1325553460183171214>",
-        "idName": "dowsingrod",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "mine",
-            "duration": 1800000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                114,
-                440
-            ],
-            [
-                67,
-                350
-            ],
-            [
-                97,
-                150
-            ],
-            [
-                10,
-                15
-            ],
-            [
-                12,
-                4
-            ]
-        ],
-        "id": 132,
-        "flatId": "item132",
-        "cost": 570000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/dowsingrod.webp"
-    },
-    {
-        "name": "Scout Submarine",
-        "emoji": "<:scoutsubmarine:1271475397980065803>",
-        "idName": "scoutsubmarine",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "fish",
-            "duration": 3600000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                8,
-                20
-            ],
-            [
-                99,
-                15
-            ],
-            [
-                36,
-                8
-            ],
-            [
-                62,
-                5
-            ],
-            [
-                109,
-                1
-            ]
-        ],
-        "id": 133,
-        "flatId": "item133",
-        "cost": 5932300,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/scoutsubmarine.webp"
-    },
-    {
-        "name": "Knife Turret",
-        "emoji": "<:knifeturret:1271475252622262437>",
-        "idName": "knifeturret",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "hunt",
-            "duration": 3600000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                3,
-                1500
-            ],
-            [
-                45,
-                200
-            ],
-            [
-                54,
-                20
-            ],
-            [
-                63,
-                6
-            ],
-            [
-                23,
-                5
-            ]
-        ],
-        "desc": "You'll wonder why you ever bothered with stabbing something the old fashioned way once you see this chain-fed beaut filet everything in a 50 meter radius.",
-        "damageMultiplier": 6,
-        "damage": 36063000,
-        "id": 134,
-        "flatId": "item134",
-        "cost": 6010500,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/knifeturret.webp"
-    },
-    {
-        "name": "Survival Kit",
-        "emoji": "<:survivalkit:1271475563248484414>",
-        "idName": "survivalkit",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "explore",
-            "duration": 3600000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                47,
-                1100
-            ],
-            [
-                69,
-                680
-            ],
-            [
-                71,
-                440
-            ],
-            [
-                82,
-                240
-            ],
-            [
-                51,
-                30
-            ],
-            [
-                65,
-                12
-            ],
-            [
-                17,
-                10
-            ],
-            [
-                42,
-                1
-            ],
-            [
-                22,
-                4
-            ],
-            [
-                131,
-                2
-            ]
-        ],
-        "id": 135,
-        "flatId": "item135",
-        "cost": 4982350,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/survivalkit.webp"
-    },
-    {
-        "name": "Mecha Canary",
-        "emoji": "<:mechacanary:1271475333513740369>",
-        "idName": "mechacanary",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "mine",
-            "duration": 3600000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                66,
-                5000
-            ],
-            [
-                106,
-                100
-            ],
-            [
-                23,
-                10
-            ],
-            [
-                108,
-                1
-            ]
-        ],
-        "id": 136,
-        "flatId": "item136",
-        "cost": 5739000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/mechacanary.webp"
-    },
-    {
-        "name": "Massive Driftnet",
-        "emoji": "<:massivedriftnet:1271475284184400043>",
-        "idName": "massivedriftnet",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "fish",
-            "duration": 7200000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                116,
-                5
-            ],
-            [
-                9,
-                200
-            ],
-            [
-                65,
-                20
-            ],
-            [
-                64,
-                60
-            ],
-            [
-                129,
-                5
-            ],
-            [
-                109,
-                1
-            ]
-        ],
-        "id": 137,
-        "flatId": "item137",
-        "cost": 104424800,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/massivedriftnet.webp"
-    },
-    {
-        "name": "Mutagenic Sludge",
-        "emoji": "<:mutagenicsludge:1325553849611849820>",
-        "idName": "mutagenicsludge",
-        "uncraftable": false,
-        "attributes": [
-            "petHoldable"
-        ],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "hunt",
-            "duration": 7200000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                88,
-                5
-            ],
-            [
-                2,
-                25000
-            ],
-            [
-                50,
-                20000
-            ],
-            [
-                54,
-                10000
-            ],
-            [
-                29,
-                200
-            ],
-            [
-                102,
-                10
-            ]
-        ],
-        "desc": "Highly toxic chemicals capable of causing mass wildlife extinction. In smaller doses it can raise the chance of Aura mutations when breeding Pets... (+3x)",
-        "id": 138,
-        "flatId": "item138",
-        "cost": 97900000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/mutagenicsludge.webp"
-    },
-    {
-        "name": "Cursed Charm",
-        "emoji": "<:cursedcharm:1271475038297522226>",
-        "idName": "cursedcharm",
-        "uncraftable": false,
-        "attributes": [
-            "petHoldable"
-        ],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "explore",
-            "duration": 7200000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                89,
-                1
-            ],
-            [
-                115,
-                5
-            ]
-        ],
-        "desc": "Coexisting good and evil energies reveal secrets to those this charm's influence. It's also been known to increase the chances of Skin mutations when breeding Pets... (+3x)",
-        "id": 139,
-        "flatId": "item139",
-        "cost": 100000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/cursedcharm.webp"
-    },
-    {
-        "name": "Orbital Mining Laser",
-        "emoji": "<:mininglaser:1325553825309921290>",
-        "idName": "orbitalmininglaser",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "mine",
-            "duration": 7200000,
-            "multiplier": 2
-        },
-        "recipe": [
-            [
-                90,
-                1
-            ],
-            [
-                63,
-                250
-            ],
-            [
-                105,
-                150
-            ],
-            [
-                62,
-                40
-            ],
-            [
-                40,
-                20
-            ],
-            [
-                65,
-                10
-            ],
-            [
-                117,
-                4
-            ],
-            [
-                109,
-                2
-            ]
-        ],
-        "id": 140,
-        "flatId": "item140",
-        "cost": 104804600,
-        "usedToCraft": [
-            86
-        ],
-        "imageUrl": "/assets/game/img/items/webp/mininglaser.webp"
-    },
-    {
-        "name": "Exquisite Trunk",
-        "emoji": "<:exquisitetrunk:1346978605204246591>",
-        "idName": "exquisitetrunk",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 10000000,
-        "recipe": [],
-        "desc": "A decorated trunk that yields exceptionally valuable loot when opened.",
-        "id": 141,
-        "flatId": "item141",
-        "cost": 10000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/exquisitetrunk.webp"
-    },
-    {
-        "name": "Magic Conch",
-        "emoji": "🐚",
-        "idName": "magicconch",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "fish",
-            "duration": 14400000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "desc": "All hail the Magic Conch.",
-        "id": 142,
-        "flatId": "item142",
-        "cost": 650000000,
-        "usedToCraft": [],
-        "imageUrl": "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f41a.svg"
-    },
-    {
-        "name": "Untamed Spirit",
-        "emoji": "<:untamedspirit:1346979229795094618>",
-        "idName": "untamedspirit",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "hunt",
-            "duration": 14400000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 143,
-        "flatId": "item143",
-        "cost": 650000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/untamedspirit.webp"
-    },
-    {
-        "name": "Seraphic Clasp",
-        "emoji": "<:seraphicclasp:1346979154960318527>",
-        "idName": "seraphicclasp",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "explore",
-            "duration": 14400000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 144,
-        "flatId": "item144",
-        "cost": 650000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/seraphicclasp.webp"
-    },
-    {
-        "name": "Condemned Skull",
-        "emoji": "<:condemnedskull:1346978319048114227>",
-        "idName": "condemnedskull",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "mine",
-            "duration": 14400000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 145,
-        "flatId": "item145",
-        "cost": 650000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/condemnedskull.webp"
-    },
-    {
-        "name": "Sialogogue",
-        "emoji": "<:sialogogue:1370436783115862026>",
-        "idName": "sialogogue",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 1,
-        "recipe": [],
-        "desc": "Massively increases the amount of an Item currently craved by a Pet.",
-        "id": 146,
-        "flatId": "item146",
-        "cost": 400000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/sialogogue.webp"
-    },
-    {
-        "name": "Green Gemerald",
-        "emoji": "<:greengemerald:1351031047243956307>",
-        "idName": "greengemerald",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 147,
-        "flatId": "item147",
-        "cost": 250000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/greengemerald.webp"
-    },
-    {
-        "name": "Amber Gemerald",
-        "emoji": "<:ambergemerald:1351030935457628230>",
-        "idName": "ambergemerald",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 148,
-        "flatId": "item148",
-        "cost": 500000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/ambergemerald.webp"
-    },
-    {
-        "name": "Purple Gemerald",
-        "emoji": "<:purplegemerald:1351031071206019163>",
-        "idName": "purplegemerald",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 149,
-        "flatId": "item149",
-        "cost": 750000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/purplegemerald.webp"
-    },
-    {
-        "name": "Red Gemerald",
-        "emoji": "<:redgemerald:1351031112012660817>",
-        "idName": "redgemerald",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 150,
-        "flatId": "item150",
-        "cost": 1000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/redgemerald.webp"
-    },
-    {
-        "name": "Fragrant Dogrose",
-        "emoji": "<:fragrantdogrose:1346978670488719412>",
-        "idName": "fragrantdogrose",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "petAdventureBoostEffect": {
-            "multiplier": 2,
-            "duration": 7200000
-        },
-        "worthPerGainedFromHarvest": 4500000,
-        "recipe": [],
-        "id": 151,
-        "flatId": "item151",
-        "cost": 2500000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/fragrantdogrose.webp"
-    },
-    {
-        "name": "Mystical Rowan",
-        "emoji": "<:mysticalrowan:1346979030821503057>",
-        "idName": "mysticalrowan",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "petAdventureBoostEffect": {
-            "multiplier": 4,
-            "duration": 7200000
-        },
-        "worthPerGainedFromHarvest": 45000000,
-        "recipe": [],
-        "id": 152,
-        "flatId": "item152",
-        "cost": 25000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/mysticalrowan.webp"
-    },
-    {
-        "name": "Legendary Aguaje",
-        "emoji": "<:legendaryaguaje:1346978951062622309>",
-        "idName": "legendaryaguaje",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "petAdventureBoostEffect": {
-            "multiplier": 8,
-            "duration": 7200000
-        },
-        "worthPerGainedFromHarvest": 300000000,
-        "recipe": [],
-        "id": 153,
-        "flatId": "item153",
-        "cost": 250000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/legendaryaguaje.webp"
-    },
-    {
-        "name": "Rainmaking Amulet",
-        "emoji": "<:rainmakingamulet:1351031090848071790>",
-        "idName": "rainmakingamulet",
-        "uncraftable": true,
-        "attributes": [
-            "equippable"
-        ],
-        "lootSources": [],
-        "recipe": [],
-        "desc": "This vibrant blue trinket reminds you of a tropical ocean. Equipped amulets allow you to make up for lost Farm watering. If an additional water could have occurred since you last tended your farm, an amulet is consumed and the effect is increased. Multiple equipped amulets will stack their effects.",
-        "id": 154,
-        "flatId": "item154",
-        "cost": 7500000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/rainmakingamulet.webp"
-    },
-    {
-        "name": "Gilded Manure",
-        "emoji": "<:gildedmanure:1351030993464852605>",
-        "idName": "gildedmanure",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "farmPlotBoostEffect": {
-            "multiplier": 1250,
-            "duration": 86400000
-        },
-        "recipe": [],
-        "id": 155,
-        "flatId": "item155",
-        "cost": 1000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/gildedmanure.webp"
-    },
-    {
-        "name": "Enriching Fertilizer",
-        "emoji": "<:industrialfertilizer:1346978881936293960>",
-        "idName": "enrichingfertilizer",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "farmPlotBoostEffect": {
-            "multiplier": 5,
-            "duration": 43200000
-        },
-        "recipe": [
-            [
-                24,
-                1440
-            ],
-            [
-                67,
-                100000
-            ],
-            [
-                46,
-                250000
-            ]
-        ],
-        "id": 156,
-        "flatId": "item156",
-        "cost": 34250000,
-        "usedToCraft": [
-            157
-        ],
-        "imageUrl": "/assets/game/img/items/webp/industrialfertilizer.webp"
-    },
-    {
-        "name": "Experimental Fertilizer",
-        "emoji": "<:experimentalfertilizer:1346978532265295942>",
-        "idName": "experimentalfertilizer",
-        "uncraftable": false,
-        "attributes": [],
-        "lootSources": [],
-        "useLimit": 9007199254740991,
-        "farmPlotBoostEffect": {
-            "multiplier": 20,
-            "duration": 43200000
-        },
-        "recipe": [
-            [
-                156,
-                1
-            ],
-            [
-                88,
-                5
-            ]
-        ],
-        "id": 157,
-        "flatId": "item157",
-        "cost": 84250000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/experimentalfertilizer.webp"
-    },
-    {
-        "name": "Auspicious Coin",
-        "emoji": "<:auspiciouscoin:1351030962234064896>",
-        "idName": "auspiciouscoin",
-        "uncraftable": true,
-        "attributes": [
-            "equippable"
-        ],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "desc": "Bad luck will seem to disappear once this coin is in your possession. If a coinflip is lost while this item is equipped, the loss is prevented. There's a 10% chance this item is consumed each time it's triggered.",
-        "id": 158,
-        "flatId": "item158",
-        "cost": 1000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/auspiciouscoin.webp"
-    },
-    {
-        "name": "Atlantic Obol",
-        "emoji": "<:atlanticobol:1370436585048244304>",
-        "idName": "atlanticobol",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "fish",
-            "duration": 28800000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 159,
-        "flatId": "item159",
-        "cost": 5000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/atlanticobol.webp"
-    },
-    {
-        "name": "Hunter's Blind",
-        "emoji": "<:huntersblind:1370436692195934208>",
-        "idName": "huntersblind",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "hunt",
-            "duration": 28800000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 160,
-        "flatId": "item160",
-        "cost": 5000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/huntersblind.webp"
-    },
-    {
-        "name": "Daoic Seal",
-        "emoji": "<:daoicseal:1370436665281347765>",
-        "idName": "daoicseal",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "explore",
-            "duration": 28800000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 161,
-        "flatId": "item161",
-        "cost": 5000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/daoicseal.webp"
-    },
-    {
-        "name": "Subterran Crest",
-        "emoji": "<:subterrancrest:1370436820873121832>",
-        "idName": "subterrancrest",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "useLimit": 9007199254740991,
-        "effect": {
-            "type": "actionBoost",
-            "action": "mine",
-            "duration": 28800000,
-            "multiplier": 2
-        },
-        "recipe": [],
-        "id": 162,
-        "flatId": "item162",
-        "cost": 5000000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/subterrancrest.webp"
-    },
-    {
-        "name": "Pluperfect Gemerald",
-        "emoji": "<:pluperfectgemerald:1370436751096807516>",
-        "idName": "pluperfectgemerald",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 163,
-        "flatId": "item163",
-        "cost": 750000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/pluperfectgemerald.webp"
-    },
-    {
-        "name": "Mystical Balls",
-        "emoji": "<:mysticalballs:1370436718750076958>",
-        "idName": "mysticalballs",
-        "uncraftable": true,
-        "attributes": [],
-        "lootSources": [
-            "rare"
-        ],
-        "recipe": [],
-        "id": 164,
-        "flatId": "item164",
-        "cost": 250000000,
-        "usedToCraft": [],
-        "imageUrl": "/assets/game/img/items/webp/mysticalballs.webp"
-    }
-]
+  {
+    name: "Rock",
+    emoji: "🪨",
+    idName: "rock",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore", "mine", "hunt"],
+    recipe: [],
+    id: 0,
+    flatId: "item0",
+    cost: 50,
+    usedToCraft: [16, 43],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faa8.svg",
+  },
+  {
+    name: "Weeds",
+    emoji: "🌾",
+    idName: "weeds",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 1,
+    flatId: "item1",
+    cost: 75,
+    usedToCraft: [17, 76],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f33e.svg",
+  },
+  {
+    name: "Discarded Butt",
+    emoji: "🚬",
+    idName: "discardedbutt",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 2,
+    flatId: "item2",
+    cost: 100,
+    usedToCraft: [22, 138],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f6ac.svg",
+  },
+  {
+    name: "Rusty Knife",
+    emoji: "🔪",
+    idName: "rustyknife",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    desc: "Ah, yes. Rusty and dull. The tetanus is bound to get 'em if they survive the traumatic stabbing.",
+    damageMultiplier: 1,
+    damage: 200,
+    id: 3,
+    flatId: "item3",
+    cost: 200,
+    usedToCraft: [42, 134],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f52a.svg",
+  },
+  {
+    name: "Scrap Metal",
+    emoji: "🔩",
+    idName: "scrapmetal",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 4,
+    flatId: "item4",
+    cost: 250,
+    usedToCraft: [15, 18],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f529.svg",
+  },
+  {
+    name: "Big Log",
+    emoji: "🪵",
+    idName: "biglog",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 5,
+    flatId: "item5",
+    cost: 300,
+    usedToCraft: [15, 18, 43, 127],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fab5.svg",
+  },
+  {
+    name: "Rich Wool",
+    emoji: "🐏",
+    idName: "richwool",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore", "hunt", "item30"],
+    recipe: [],
+    id: 6,
+    flatId: "item6",
+    cost: 750,
+    usedToCraft: [65, 131],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f40f.svg",
+  },
+  {
+    name: "Floppy Disk",
+    emoji: "💾",
+    idName: "floppydisk",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 7,
+    flatId: "item7",
+    cost: 1000,
+    usedToCraft: [103],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4be.svg",
+  },
+  {
+    name: "Lightbulb",
+    emoji: "💡",
+    idName: "lightbulb",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 8,
+    flatId: "item8",
+    cost: 1500,
+    usedToCraft: [40, 44, 117, 133],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4a1.svg",
+  },
+  {
+    name: "Rubber Tire",
+    emoji: "<:rubbertire:1223831398671061054>",
+    idName: "rubbertire",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore"],
+    recipe: [],
+    id: 9,
+    flatId: "item9",
+    cost: 7500,
+    usedToCraft: [105, 137],
+    imageUrl: "/assets/game/img/items/webp/rubbertire.webp",
+  },
+  {
+    name: "Ritual Urn",
+    emoji: "🏺",
+    idName: "ritualurn",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore", "hunt", "item84", "item83"],
+    recipe: [],
+    id: 10,
+    flatId: "item10",
+    cost: 10000,
+    usedToCraft: [78, 115, 132],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f3fa.svg",
+  },
+  {
+    name: "Ancient Fossil",
+    emoji: "<:ancientfossil:1325553387907055646>",
+    idName: "ancientfossil",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore", "item30", "item84"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "mine",
+      duration: 900000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 11,
+    flatId: "item11",
+    cost: 50000,
+    usedToCraft: [77, 78],
+    imageUrl: "/assets/game/img/items/webp/ancientfossil.webp",
+  },
+  {
+    name: "Diamond",
+    emoji: "💎",
+    idName: "diamond",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine", "item87", "item141"],
+    recipe: [],
+    id: 12,
+    flatId: "item12",
+    cost: 50000,
+    usedToCraft: [36, 64, 132],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f48e.svg",
+  },
+  {
+    name: "Old Crown",
+    emoji: "👑",
+    idName: "oldcrown",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore", "fish", "item84", "item28", "item30"],
+    recipe: [],
+    id: 13,
+    flatId: "item13",
+    cost: 250000,
+    usedToCraft: [115],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f451.svg",
+  },
+  {
+    name: "Manuscript",
+    emoji: "📜",
+    idName: "manuscript",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["explore", "item84"],
+    recipe: [],
+    id: 14,
+    flatId: "item14",
+    cost: 500000,
+    usedToCraft: [78, 115],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4dc.svg",
+  },
+  {
+    name: "Chisel",
+    emoji: "⚒️",
+    idName: "chisel",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [5, 2],
+      [4, 5],
+    ],
+    desc: "A basic, yet versatile tool often used in crafting recipes calling for stone or bricks.",
+    id: 15,
+    flatId: "item15",
+    cost: 1850,
+    usedToCraft: [16, 20, 42],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u2692.svg",
+  },
+  {
+    name: "Bricks",
+    emoji: "🧱",
+    idName: "bricks",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [15, 1],
+      [0, 40],
+    ],
+    id: 16,
+    flatId: "item16",
+    cost: 3850,
+    usedToCraft: [20],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9f1.svg",
+  },
+  {
+    name: "Thick Rope",
+    emoji: "🪢",
+    idName: "thickrope",
+    uncraftable: false,
+    attributes: [],
+    lootSources: ["item30"],
+    recipe: [[1, 40]],
+    id: 17,
+    flatId: "item17",
+    cost: 3000,
+    usedToCraft: [26, 43, 45, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faa2.svg",
+  },
+  {
+    name: "Wooden Hull",
+    emoji: "<:woodenhull:1223831610336739419>",
+    idName: "woodenhull",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [5, 70],
+      [4, 30],
+    ],
+    id: 18,
+    flatId: "item18",
+    cost: 28500,
+    usedToCraft: [35],
+    imageUrl: "/assets/game/img/items/webp/woodenhull.webp",
+  },
+  {
+    name: "Steel Beam",
+    emoji: "<:steelbeam:1325554036371361792>",
+    idName: "steelbeam",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [92, 220],
+      [95, 30],
+    ],
+    id: 19,
+    flatId: "item19",
+    cost: 20000,
+    usedToCraft: [20, 109, 110],
+    imageUrl: "/assets/game/img/items/webp/steelbeam.webp",
+  },
+  {
+    name: "Grand Hall",
+    emoji: "🏛️",
+    idName: "grandhall",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [16, 25],
+      [15, 8],
+      [19, 4],
+      [62, 4],
+    ],
+    id: 20,
+    flatId: "item20",
+    cost: 309050,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f3db.svg",
+  },
+  {
+    name: "Tough Rawhide",
+    emoji: "<:toughrawhide:1223831297219100703>",
+    idName: "toughrawhide",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [74, 5],
+      [73, 50],
+    ],
+    id: 21,
+    flatId: "item21",
+    cost: 100000,
+    usedToCraft: [65, 131],
+    imageUrl: "/assets/game/img/items/webp/toughrawhide.webp",
+  },
+  {
+    name: "Thermite",
+    emoji: "🎇",
+    idName: "thermite",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [[2, 20]],
+    desc: "A crafting ingredient, commonly used to melt and forge a variety of metal components.",
+    id: 22,
+    flatId: "item22",
+    cost: 2000,
+    usedToCraft: [26, 27, 29, 37, 42, 62, 80, 81, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f387.svg",
+  },
+  {
+    name: "Basic Motor",
+    emoji: "<:basicmotor:1271475008006389761>",
+    idName: "basicmotor",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [92, 250],
+      [99, 6],
+      [27, 4],
+      [105, 1],
+    ],
+    id: 23,
+    flatId: "item23",
+    cost: 70100,
+    usedToCraft: [107, 109, 134, 136],
+    imageUrl: "/assets/game/img/items/webp/basicmotor.webp",
+  },
+  {
+    name: "Manure",
+    emoji: "💩",
+    idName: "manure",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    worthPerGainedFromPetFeed: 650000,
+    recipe: [],
+    id: 24,
+    flatId: "item24",
+    cost: 12500,
+    usedToCraft: [156],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4a9.svg",
+  },
+  {
+    name: "Hearty Burger",
+    emoji: "🍔",
+    idName: "heartyburger",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [33, 20],
+      [71, 15],
+      [114, 10],
+      [82, 2],
+    ],
+    foodTier: 3,
+    petEnergy: 32500,
+    id: 25,
+    flatId: "item25",
+    cost: 32500,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f354.svg",
+  },
+  {
+    name: "Bomb",
+    emoji: "💣",
+    idName: "bomb",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [94, 5],
+      [22, 3],
+      [17, 1],
+    ],
+    damageMultiplier: 2,
+    damage: 20000,
+    id: 26,
+    flatId: "item26",
+    cost: 10000,
+    usedToCraft: [79],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4a3.svg",
+  },
+  {
+    name: "Aluminum Pipe",
+    emoji: "<:aluminumpipe:1223828205870252097>",
+    idName: "aluminumpipe",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [94, 20],
+      [22, 1],
+    ],
+    id: 27,
+    flatId: "item27",
+    cost: 6000,
+    usedToCraft: [23, 80],
+    imageUrl: "/assets/game/img/items/webp/aluminumpipe.webp",
+  },
+  {
+    name: "Ocean Bounty",
+    emoji: "🎁",
+    idName: "oceanbounty",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 100000000,
+    recipe: [],
+    desc: "Produces uncommon Fishing loot when used.",
+    id: 28,
+    flatId: "item28",
+    cost: 250000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg",
+  },
+  {
+    name: "Raw Plastic",
+    emoji: "<:rawplastic:1325553988749230182>",
+    idName: "rawplastic",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [22, 1],
+      [99, 10],
+    ],
+    id: 29,
+    flatId: "item29",
+    cost: 42000,
+    usedToCraft: [107, 109, 117, 138],
+    imageUrl: "/assets/game/img/items/webp/rawplastic.webp",
+  },
+  {
+    name: "Fancy Crate",
+    emoji: "<:fancycrate:1159673904344866906>",
+    idName: "fancycrate",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["item141"],
+    useLimit: 5000000,
+    recipe: [],
+    desc: "An antique box adorned with intricate carvings. It likely contains valuable treasures and useful tools!",
+    id: 30,
+    flatId: "item30",
+    cost: 150000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/fancycrate.webp",
+  },
+  {
+    name: "Exotic Bean",
+    emoji: "<:exoticbean:1271475092995571745>",
+    idName: "exoticbean",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 11000,
+    foodTier: 3,
+    petEnergy: 150,
+    id: 31,
+    flatId: "item31",
+    cost: 150,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/exoticbean.webp",
+  },
+  {
+    name: "Soybean",
+    emoji: "<:soybean:1159673943762948096>",
+    idName: "soybean",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 35000,
+    foodTier: 3,
+    petEnergy: 500,
+    id: 32,
+    flatId: "item32",
+    cost: 500,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/soybean.webp",
+  },
+  {
+    name: "Golden Wheat",
+    emoji: "<:wheat:1223831574773108816>",
+    idName: "goldenwheat",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 70000,
+    foodTier: 3,
+    petEnergy: 1000,
+    id: 33,
+    flatId: "item33",
+    cost: 1000,
+    usedToCraft: [25],
+    imageUrl: "/assets/game/img/items/webp/wheat.webp",
+  },
+  {
+    name: "Russet Potato",
+    emoji: "🥔",
+    idName: "russetpotato",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 70000,
+    foodTier: 2,
+    petEnergy: 1000,
+    id: 34,
+    flatId: "item34",
+    cost: 1000,
+    usedToCraft: [77],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f954.svg",
+  },
+  {
+    name: "Treated Hull",
+    emoji: "<:treatedhull:1223831551524212827>",
+    idName: "treatedhull",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [18, 1],
+      [99, 4],
+    ],
+    id: 35,
+    flatId: "item35",
+    cost: 44500,
+    usedToCraft: [36],
+    imageUrl: "/assets/game/img/items/webp/treatedhull.webp",
+  },
+  {
+    name: "Reinforced Hull",
+    emoji: "<:reinforcedhull:1223831349476200519>",
+    idName: "reinforcedhull",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [12, 10],
+      [35, 1],
+    ],
+    id: 36,
+    flatId: "item36",
+    cost: 544500,
+    usedToCraft: [79, 110, 113, 133],
+    imageUrl: "/assets/game/img/items/webp/reinforcedhull.webp",
+  },
+  {
+    name: "Silicon Dust",
+    emoji: "<:silicondust:1271475464438939701>",
+    idName: "silicondust",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [53, 18],
+      [22, 1],
+    ],
+    id: 37,
+    flatId: "item37",
+    cost: 20000,
+    usedToCraft: [40, 65, 108],
+    imageUrl: "/assets/game/img/items/webp/silicondust.webp",
+  },
+  {
+    name: "Eternal Snowflake",
+    emoji: "❄️",
+    idName: "eternalsnowflake",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 1,
+    recipe: [],
+    desc: "A crystalline formation that won't melt no matter the heat. Using it resets your Action cooldowns fully.",
+    cooldownTime: 900000,
+    id: 38,
+    flatId: "item38",
+    cost: 10000000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u2744.svg",
+  },
+  {
+    name: "Light Suede",
+    emoji: "<:lightsuede:1223830801599168512>",
+    idName: "lightsuede",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [70, 13],
+      [72, 8],
+    ],
+    id: 39,
+    flatId: "item39",
+    cost: 12500,
+    usedToCraft: [131],
+    imageUrl: "/assets/game/img/items/webp/lightsuede.webp",
+  },
+  {
+    name: "Solar Panel",
+    emoji: "<:solarpanel:1271475498391699537>",
+    idName: "solarpanel",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [8, 12],
+      [37, 6],
+      [62, 4],
+      [104, 5],
+    ],
+    id: 40,
+    flatId: "item40",
+    cost: 263500,
+    usedToCraft: [86, 140],
+    imageUrl: "/assets/game/img/items/webp/solarpanel.webp",
+  },
+  {
+    name: "DX Coolant",
+    emoji: "<:dxcoolant:1325553485307183195>",
+    idName: "dxcoolant",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    desc: "The bleeding edge in superconductive cooling technology. Using this item on a Generator temporarily protects it from overheating.",
+    id: 41,
+    flatId: "item41",
+    cost: 5000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/dxcoolant.webp",
+  },
+  {
+    name: "Broadsword",
+    emoji: "<:broadsword:1325553413072752743>",
+    idName: "broadsword",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [93, 500],
+      [3, 250],
+      [22, 1],
+      [15, 1],
+    ],
+    damageMultiplier: 3,
+    damage: 311550,
+    id: 42,
+    flatId: "item42",
+    cost: 103850,
+    usedToCraft: [78, 135],
+    imageUrl: "/assets/game/img/items/webp/broadsword.webp",
+  },
+  {
+    name: "Poison Spear",
+    emoji: "<:poisonspear:1325553942897229977>",
+    idName: "poisonspear",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [54, 100],
+      [5, 30],
+      [0, 10],
+      [17, 5],
+    ],
+    damageMultiplier: 4,
+    damage: 1098000,
+    id: 43,
+    flatId: "item43",
+    cost: 274500,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/poisonspear.webp",
+  },
+  {
+    name: "Stun Gun",
+    emoji: "<:stungun:1325554058135736373>",
+    idName: "stungun",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [50, 750],
+      [104, 250],
+      [8, 10],
+      [63, 4],
+      [105, 2],
+    ],
+    desc: "Prank your friends by giving them a zap with this little number. It's good, clean fun, as long as you keep it above the waist and away from any mucuous membranes!",
+    damageMultiplier: 5,
+    damage: 6658500,
+    id: 44,
+    flatId: "item44",
+    cost: 1331700,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/stungun.webp",
+  },
+  {
+    name: "Reinforced Chain",
+    emoji: "⛓️",
+    idName: "reinforcedchain",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [17, 6],
+      [95, 12],
+    ],
+    id: 45,
+    flatId: "item45",
+    cost: 21600,
+    usedToCraft: [64, 109, 130, 134],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u26d3.svg",
+  },
+  {
+    name: "Seaweed",
+    emoji: "🌿",
+    idName: "seaweed",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 25,
+    id: 46,
+    flatId: "item46",
+    cost: 25,
+    usedToCraft: [76, 156],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f33f.svg",
+  },
+  {
+    name: "Sardine",
+    emoji: "🐟",
+    idName: "sardine",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 50,
+    id: 47,
+    flatId: "item47",
+    cost: 50,
+    usedToCraft: [76, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f41f.svg",
+  },
+  {
+    name: "Tattered Boot",
+    emoji: "🥾",
+    idName: "tatteredboot",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "explore"],
+    recipe: [],
+    id: 48,
+    flatId: "item48",
+    cost: 100,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f97e.svg",
+  },
+  {
+    name: "Prawn",
+    emoji: "🦐",
+    idName: "prawn",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 150,
+    id: 49,
+    flatId: "item49",
+    cost: 150,
+    usedToCraft: [76],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f990.svg",
+  },
+  {
+    name: "Jellyfish",
+    emoji: "🪼",
+    idName: "jellyfish",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 350,
+    id: 50,
+    flatId: "item50",
+    cost: 350,
+    usedToCraft: [44, 76, 138],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fabc.svg",
+  },
+  {
+    name: "Antique Bottle",
+    emoji: "🍾",
+    idName: "antiquebottle",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item30"],
+    recipe: [],
+    id: 51,
+    flatId: "item51",
+    cost: 500,
+    usedToCraft: [62, 128, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f37e.svg",
+  },
+  {
+    name: "Ocean Crab",
+    emoji: "🦀",
+    idName: "oceancrab",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 750,
+    id: 52,
+    flatId: "item52",
+    cost: 750,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f980.svg",
+  },
+  {
+    name: "Chunky Coral",
+    emoji: "🪸",
+    idName: "chunkycoral",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    id: 53,
+    flatId: "item53",
+    cost: 1000,
+    usedToCraft: [37, 62],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fab8.svg",
+  },
+  {
+    name: "Blowfish",
+    emoji: "🐡",
+    idName: "blowfish",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 2500,
+    id: 54,
+    flatId: "item54",
+    cost: 2500,
+    usedToCraft: [43, 80, 134, 138],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f421.svg",
+  },
+  {
+    name: "Electric Eel",
+    emoji: "<:electriceel:1223830600763310092>",
+    idName: "electriceel",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish"],
+    recipe: [],
+    foodTier: 2,
+    petEnergy: 5000,
+    id: 55,
+    flatId: "item55",
+    cost: 5000,
+    usedToCraft: [63],
+    imageUrl: "/assets/game/img/items/webp/electriceel.webp",
+  },
+  {
+    name: "Clamshell",
+    emoji: "<:clamshell:1370436638869815366>",
+    idName: "clamshell",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item28"],
+    recipe: [],
+    id: 56,
+    flatId: "item56",
+    cost: 10000,
+    usedToCraft: [115],
+    imageUrl: "/assets/game/img/items/webp/clamshell.webp",
+  },
+  {
+    name: "Great White",
+    emoji: "🦈",
+    idName: "greatwhite",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item28"],
+    recipe: [],
+    foodTier: 2,
+    petEnergy: 25000,
+    id: 57,
+    flatId: "item57",
+    cost: 25000,
+    usedToCraft: [77, 130],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f988.svg",
+  },
+  {
+    name: "Ornate Necklace",
+    emoji: "📿",
+    idName: "ornatenecklace",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item30", "item28"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "hunt",
+      duration: 900000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 58,
+    flatId: "item58",
+    cost: 50000,
+    usedToCraft: [130],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4ff.svg",
+  },
+  {
+    name: "Pearled Oyster",
+    emoji: "🦪",
+    idName: "pearledoyster",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item28", "item141"],
+    recipe: [],
+    foodTier: 2,
+    petEnergy: 100000,
+    id: 59,
+    flatId: "item59",
+    cost: 100000,
+    usedToCraft: [115],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9aa.svg",
+  },
+  {
+    name: "Treasure Chest",
+    emoji: "<:treasurechest:1223831532678938765>",
+    idName: "treasurechest",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item28"],
+    recipe: [],
+    id: 60,
+    flatId: "item60",
+    cost: 500000,
+    usedToCraft: [115],
+    imageUrl: "/assets/game/img/items/webp/treasurechest.webp",
+  },
+  {
+    name: "Giant Squid",
+    emoji: "<:giantsquid:1325553728308121700>",
+    idName: "giantsquid",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["fish", "item28"],
+    recipe: [],
+    foodTier: 2,
+    petEnergy: 1000000,
+    id: 61,
+    flatId: "item61",
+    cost: 1000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/giantsquid.webp",
+  },
+  {
+    name: "Glass Pane",
+    emoji: "🪟",
+    idName: "glasspane",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [51, 25],
+      [53, 15],
+      [22, 1],
+    ],
+    id: 62,
+    flatId: "item62",
+    cost: 29500,
+    usedToCraft: [20, 40, 86, 133, 140],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fa9f.svg",
+  },
+  {
+    name: "Charged Battery",
+    emoji: "🔋",
+    idName: "chargedbattery",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [55, 30],
+      [104, 10],
+    ],
+    id: 63,
+    flatId: "item63",
+    cost: 165000,
+    usedToCraft: [44, 86, 129, 134, 140],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f50b.svg",
+  },
+  {
+    name: "Diamond Tether",
+    emoji: "<:diamondtether:1271475065497718785>",
+    idName: "diamondtether",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [45, 6],
+      [12, 12],
+    ],
+    id: 64,
+    flatId: "item64",
+    cost: 729600,
+    usedToCraft: [137],
+    imageUrl: "/assets/game/img/items/webp/diamondtether.webp",
+  },
+  {
+    name: "Heavy Insulation",
+    emoji: "<:heavyinsulation:1271475190613934172>",
+    idName: "heavyinsulation",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [6, 50],
+      [21, 2],
+      [37, 1],
+    ],
+    id: 65,
+    flatId: "item65",
+    cost: 257500,
+    usedToCraft: [80, 110, 135, 137, 140],
+    imageUrl: "/assets/game/img/items/webp/heavyinsulation.webp",
+  },
+  {
+    name: "Feathers",
+    emoji: "🪶",
+    idName: "feathers",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    id: 66,
+    flatId: "item66",
+    cost: 50,
+    usedToCraft: [128, 131, 136],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fab6.svg",
+  },
+  {
+    name: "Old Bones",
+    emoji: "🦴",
+    idName: "oldbones",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt", "explore"],
+    recipe: [],
+    id: 67,
+    flatId: "item67",
+    cost: 100,
+    usedToCraft: [81, 132, 156],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9b4.svg",
+  },
+  {
+    name: "Red Mushroom",
+    emoji: "🍄",
+    idName: "redmushroom",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 200,
+    id: 68,
+    flatId: "item68",
+    cost: 200,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f344.svg",
+  },
+  {
+    name: "Bird Nest",
+    emoji: "🪺",
+    idName: "birdnest",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 300,
+    id: 69,
+    flatId: "item69",
+    cost: 300,
+    usedToCraft: [81, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faba.svg",
+  },
+  {
+    name: "Skunk Pelt",
+    emoji: "🦨",
+    idName: "skunkpelt",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    id: 70,
+    flatId: "item70",
+    cost: 500,
+    usedToCraft: [39],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9a8.svg",
+  },
+  {
+    name: "Prime Steak",
+    emoji: "🥩",
+    idName: "primesteak",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 600,
+    id: 71,
+    flatId: "item71",
+    cost: 600,
+    usedToCraft: [25, 81, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f969.svg",
+  },
+  {
+    name: "Badger Pelt",
+    emoji: "🦡",
+    idName: "badgerpelt",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    id: 72,
+    flatId: "item72",
+    cost: 750,
+    usedToCraft: [39],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9a1.svg",
+  },
+  {
+    name: "Ox Pelt",
+    emoji: "🐃",
+    idName: "oxpelt",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt", "item83"],
+    recipe: [],
+    id: 73,
+    flatId: "item73",
+    cost: 1000,
+    usedToCraft: [21],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f403.svg",
+  },
+  {
+    name: "Buffalo Pelt",
+    emoji: "🐂",
+    idName: "buffalopelt",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt", "item83"],
+    recipe: [],
+    id: 74,
+    flatId: "item74",
+    cost: 10000,
+    usedToCraft: [21],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f402.svg",
+  },
+  {
+    name: "Elk Antlers",
+    emoji: "🦌",
+    idName: "elkantlers",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt", "item83"],
+    recipe: [],
+    id: 75,
+    flatId: "item75",
+    cost: 50000,
+    usedToCraft: [77, 115, 127],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f98c.svg",
+  },
+  {
+    name: "Seafood Salad",
+    emoji: "🥗",
+    idName: "seafoodsalad",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [46, 200],
+      [1, 50],
+      [114, 20],
+      [119, 5],
+      [47, 10],
+      [49, 10],
+      [50, 10],
+    ],
+    foodTier: 2,
+    petEnergy: 23000,
+    id: 76,
+    flatId: "item76",
+    cost: 23000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f957.svg",
+  },
+  {
+    name: "Stone Soup",
+    emoji: "🍲",
+    idName: "stonesoup",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [34, 85],
+      [81, 1],
+      [75, 1],
+      [57, 1],
+      [11, 1],
+    ],
+    foodTier: 3,
+    petEnergy: 268100,
+    id: 77,
+    flatId: "item77",
+    cost: 268100,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f372.svg",
+  },
+  {
+    name: "Imbued Sword",
+    emoji: "🗡️",
+    idName: "imbuedsword",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [10, 120],
+      [11, 60],
+      [14, 8],
+      [42, 1],
+    ],
+    damageMultiplier: 7,
+    damage: 58126950,
+    id: 78,
+    flatId: "item78",
+    cost: 8303850,
+    usedToCraft: [85],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f5e1.svg",
+  },
+  {
+    name: "Pocket Rocket",
+    emoji: "🚀",
+    idName: "pocketrocket",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [26, 10000],
+      [99, 500],
+      [102, 40],
+      [36, 20],
+      [109, 8],
+      [107, 8],
+      [117, 1],
+      [108, 1],
+    ],
+    desc: "Whoever's on the receiving end of this high-precision multistage thermonuclear ICBM will not, in fact, be happy to see you. They won't see you at all, actually.",
+    damageMultiplier: 9,
+    damage: 1355031000,
+    id: 79,
+    flatId: "item79",
+    cost: 150559000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f680.svg",
+  },
+  {
+    name: "Sinurator",
+    emoji: "<:sinurator:1325554012761620480>",
+    idName: "sinurator",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [99, 5000],
+      [54, 2500],
+      [22, 100],
+      [27, 50],
+      [65, 10],
+    ],
+    desc: "A thermophile's napalm-and-acid powered best friend.",
+    damageMultiplier: 8,
+    damage: 234600000,
+    id: 80,
+    flatId: "item80",
+    cost: 29325000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/sinurator.webp",
+  },
+  {
+    name: "Warm Broth",
+    emoji: "🫕",
+    idName: "warmbroth",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [82, 10],
+      [67, 50],
+      [71, 3],
+      [69, 1],
+      [94, 20],
+      [99, 10],
+      [22, 1],
+    ],
+    foodTier: 3,
+    petEnergy: 58100,
+    id: 81,
+    flatId: "item81",
+    cost: 58100,
+    usedToCraft: [77],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fad5.svg",
+  },
+  {
+    name: "Milk",
+    emoji: "🥛",
+    idName: "milk",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["hunt"],
+    recipe: [],
+    foodTier: 1,
+    petEnergy: 500,
+    id: 82,
+    flatId: "item82",
+    cost: 500,
+    usedToCraft: [25, 81, 135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f95b.svg",
+  },
+  {
+    name: "Forest Bounty",
+    emoji: "🎁",
+    idName: "forestbounty",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 10000000,
+    recipe: [],
+    desc: "Produces uncommon Hunting loot when used.",
+    id: 83,
+    flatId: "item83",
+    cost: 250000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg",
+  },
+  {
+    name: "Hillside Bounty",
+    emoji: "🎁",
+    idName: "hillsidebounty",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 100000000,
+    recipe: [],
+    desc: "Produces uncommon Exploring loot when used.",
+    id: 84,
+    flatId: "item84",
+    cost: 250000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg",
+  },
+  {
+    name: "Crystal Sword",
+    emoji: "<:crystalsword:1325553436564914216>",
+    idName: "crystalsword",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [111, 1],
+      [78, 1],
+    ],
+    damageMultiplier: 12,
+    damage: 999646200,
+    id: 85,
+    flatId: "item85",
+    cost: 83303850,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/crystalsword.webp",
+  },
+  {
+    name: "Low Orbit Ion Cannon",
+    emoji: "<:ioncannon:1325553776420982946>",
+    idName: "loworbitioncannon",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [63, 50000],
+      [40, 5000],
+      [62, 500],
+      [110, 50],
+      [140, 1],
+    ],
+    desc: "Judgement shall rain down from the heavens, and God will have had no hand in it.",
+    damageMultiplier: 15,
+    damage: 183396069000,
+    id: 86,
+    flatId: "item86",
+    cost: 12226404600,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/ioncannon.webp",
+  },
+  {
+    name: "Cavern Bounty",
+    emoji: "🎁",
+    idName: "cavernbounty",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 200000000,
+    recipe: [],
+    desc: "Produces uncommon Mining loot when used.",
+    id: 87,
+    flatId: "item87",
+    cost: 250000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f381.svg",
+  },
+  {
+    name: "Mysterious Sludge",
+    emoji: "<:mysterioussludge:1325553871879405679>",
+    idName: "mysterioussludge",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 88,
+    flatId: "item88",
+    cost: 10000000,
+    usedToCraft: [138, 157],
+    imageUrl: "/assets/game/img/items/webp/mysterioussludge.webp",
+  },
+  {
+    name: "Evil Tome",
+    emoji: "<:eviltome:1223830669571002439>",
+    idName: "eviltome",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 89,
+    flatId: "item89",
+    cost: 50000000,
+    usedToCraft: [139],
+    imageUrl: "/assets/game/img/items/webp/eviltome.webp",
+  },
+  {
+    name: "Alien Technology",
+    emoji: "<:alientechnology:1325553337843847329>",
+    idName: "alientechnology",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 90,
+    flatId: "item90",
+    cost: 50000000,
+    usedToCraft: [140],
+    imageUrl: "/assets/game/img/items/webp/alientechnology.webp",
+  },
+  {
+    name: "Bconomy Sourcecode",
+    emoji: "<:sourcecode:1271475529941389363>",
+    idName: "bconomysourcecode",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 1,
+    recipe: [],
+    desc: "This code seems to be buggy and untested. It'll probably corrupt your data if you try to run it! On use, duplicate any Item you own (except Lunar Shard), gaining 1,000,000,000 BC worth of it.",
+    id: 91,
+    flatId: "item91",
+    cost: 1000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/sourcecode.webp",
+  },
+  {
+    name: "Coal",
+    emoji: "<:coal:1159673875106386012>",
+    idName: "coal",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine"],
+    recipe: [],
+    id: 92,
+    flatId: "item92",
+    cost: 50,
+    usedToCraft: [19, 23],
+    imageUrl: "/assets/game/img/items/webp/coal.webp",
+  },
+  {
+    name: "Copper",
+    emoji: "<:copper:1159673880110190715>",
+    idName: "copper",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine"],
+    recipe: [],
+    id: 93,
+    flatId: "item93",
+    cost: 100,
+    usedToCraft: [42, 103, 104, 105],
+    imageUrl: "/assets/game/img/items/webp/copper.webp",
+  },
+  {
+    name: "Aluminum",
+    emoji: "<:aluminum:1159673866529013760>",
+    idName: "aluminum",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine"],
+    recipe: [],
+    id: 94,
+    flatId: "item94",
+    cost: 200,
+    usedToCraft: [26, 27, 81, 104, 117],
+    imageUrl: "/assets/game/img/items/webp/aluminum.webp",
+  },
+  {
+    name: "Iron",
+    emoji: "<:iron:1163343248681619557>",
+    idName: "iron",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine"],
+    recipe: [],
+    id: 95,
+    flatId: "item95",
+    cost: 300,
+    usedToCraft: [19, 45],
+    imageUrl: "/assets/game/img/items/webp/iron.webp",
+  },
+  {
+    name: "Neodymium",
+    emoji: "<:neodymium:1163343335788924938>",
+    idName: "neodymium",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine"],
+    recipe: [],
+    id: 96,
+    flatId: "item96",
+    cost: 400,
+    usedToCraft: [103, 106, 107],
+    imageUrl: "/assets/game/img/items/webp/neodymium.webp",
+  },
+  {
+    name: "Silver",
+    emoji: "<:silver:1159673938230657025>",
+    idName: "silver",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine", "item30"],
+    recipe: [],
+    id: 97,
+    flatId: "item97",
+    cost: 500,
+    usedToCraft: [103, 130, 132],
+    imageUrl: "/assets/game/img/items/webp/silver.webp",
+  },
+  {
+    name: "Gold",
+    emoji: "<:gold:1159673913668804631>",
+    idName: "gold",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine", "item30"],
+    recipe: [],
+    id: 98,
+    flatId: "item98",
+    cost: 800,
+    usedToCraft: [103, 105, 130],
+    imageUrl: "/assets/game/img/items/webp/gold.webp",
+  },
+  {
+    name: "Petroleum",
+    emoji: "🛢️",
+    idName: "petroleum",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine"],
+    recipe: [],
+    id: 99,
+    flatId: "item99",
+    cost: 4000,
+    usedToCraft: [23, 29, 35, 79, 80, 81, 133],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f6e2.svg",
+  },
+  {
+    name: "Cobalt",
+    emoji: "<:cobalt:1159673876318527640>",
+    idName: "cobalt",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine", "item87"],
+    recipe: [],
+    id: 100,
+    flatId: "item100",
+    cost: 50000,
+    usedToCraft: [107, 128],
+    imageUrl: "/assets/game/img/items/webp/cobalt.webp",
+  },
+  {
+    name: "Platinum",
+    emoji: "<:platinum:1159673929963667516>",
+    idName: "platinum",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine", "item87", "item141"],
+    recipe: [],
+    id: 101,
+    flatId: "item101",
+    cost: 500000,
+    usedToCraft: [108],
+    imageUrl: "/assets/game/img/items/webp/platinum.webp",
+  },
+  {
+    name: "Uranium",
+    emoji: "<:uranium:1163344105192046623>",
+    idName: "uranium",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["mine", "item87"],
+    recipe: [],
+    id: 102,
+    flatId: "item102",
+    cost: 500000,
+    usedToCraft: [79, 110, 113, 138],
+    imageUrl: "/assets/game/img/items/webp/uranium.webp",
+  },
+  {
+    name: "Basic Processor",
+    emoji: "<:basicprocessor:1223831153426042910>",
+    idName: "basicprocessor",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [7, 4],
+      [96, 8],
+      [93, 6],
+      [98, 2],
+      [97, 1],
+    ],
+    id: 103,
+    flatId: "item103",
+    cost: 9900,
+    usedToCraft: [106, 108, 129],
+    imageUrl: "/assets/game/img/items/webp/basicprocessor.webp",
+  },
+  {
+    name: "Basic Capacitor",
+    emoji: "<:basiccapacitor:1271474980986683518>",
+    idName: "basiccapacitor",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [93, 5],
+      [94, 5],
+    ],
+    id: 104,
+    flatId: "item104",
+    cost: 1500,
+    usedToCraft: [40, 44, 63, 108],
+    imageUrl: "/assets/game/img/items/webp/basiccapacitor.webp",
+  },
+  {
+    name: "Insulated Wire",
+    emoji: "🔌",
+    idName: "insulatedwire",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [9, 1],
+      [93, 5],
+      [98, 2],
+    ],
+    id: 105,
+    flatId: "item105",
+    cost: 9600,
+    usedToCraft: [23, 44, 110, 140],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f50c.svg",
+  },
+  {
+    name: "Hard Drive",
+    emoji: "💽",
+    idName: "harddrive",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [103, 1],
+      [96, 4],
+    ],
+    id: 106,
+    flatId: "item106",
+    cost: 11500,
+    usedToCraft: [136],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4bd.svg",
+  },
+  {
+    name: "Industrial Rotor",
+    emoji: "<:industrialcooler:1223830309410443374>",
+    idName: "industrialrotor",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [96, 50],
+      [100, 4],
+      [23, 2],
+      [29, 1],
+    ],
+    id: 107,
+    flatId: "item107",
+    cost: 402200,
+    usedToCraft: [79, 110],
+    imageUrl: "/assets/game/img/items/webp/industrialcooler.webp",
+  },
+  {
+    name: "Advanced Processor",
+    emoji: "<:advancedprocessor:1223831428651941980>",
+    idName: "advancedprocessor",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [103, 120],
+      [104, 100],
+      [37, 40],
+      [101, 3],
+    ],
+    id: 108,
+    flatId: "item108",
+    cost: 3638000,
+    usedToCraft: [79, 136],
+    imageUrl: "/assets/game/img/items/webp/advancedprocessor.webp",
+  },
+  {
+    name: "Industrial Alternator",
+    emoji: "<:industrialalternator:1271475220389298186>",
+    idName: "industrialalternator",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [23, 12],
+      [19, 10],
+      [45, 6],
+      [29, 4],
+    ],
+    id: 109,
+    flatId: "item109",
+    cost: 1338800,
+    usedToCraft: [79, 110, 133, 137, 140],
+    imageUrl: "/assets/game/img/items/webp/industrialalternator.webp",
+  },
+  {
+    name: "Nuclear Reactor",
+    emoji: "<:nuclearreactor:1325553896256569364>",
+    idName: "nuclearreactor",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [19, 200],
+      [36, 50],
+      [65, 30],
+      [102, 20],
+      [105, 10],
+      [107, 1],
+      [109, 1],
+    ],
+    desc: "Energy production via nuclear fission has been demonstrated to be safe, renewable and efficient! As long as you have several failsafes and a team of highly experienced nuclear engineers to run it, that is...",
+    id: 110,
+    flatId: "item110",
+    cost: 50787000,
+    usedToCraft: [86, 113],
+    imageUrl: "/assets/game/img/items/webp/nuclearreactor.webp",
+  },
+  {
+    name: "Lunar Shard",
+    emoji: "<:lunarshard:1159673884916858980>",
+    idName: "lunarshard",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 1000000000,
+    recipe: [],
+    desc: "A crystal with origins unbeknownst to man. Shattering it will reveal a Rare Item. Rare Item chances are inversely weighted toward each one's base worth.",
+    id: 111,
+    flatId: "item111",
+    cost: 75000000,
+    usedToCraft: [85],
+    imageUrl: "/assets/game/img/items/webp/lunarshard.webp",
+  },
+  {
+    name: "Magic Token",
+    emoji: "<:magictoken:1163344472696946819>",
+    idName: "magictoken",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    petAdventureBoostEffect: {
+      multiplier: 10,
+      duration: 86400000,
+    },
+    recipe: [],
+    desc: "This elusive artifact grants transient powers to creatures of all kinds. On use, your Buddy gains a 10x multiplier to its Energy Capacity and Adventure Speed for 24 hours.",
+    id: 112,
+    flatId: "item112",
+    cost: 1000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/magictoken.webp",
+  },
+  {
+    name: "Little Brother",
+    emoji: "<:littlebrother:1325553802077671527>",
+    idName: "littlebrother",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [102, 250],
+      [36, 250],
+      [110, 25],
+    ],
+    desc: "Feel free to ask non-nuclear capable friends for favors once you get your hands on this humble 100-megaton warhead. They'll be more than happy to oblige!",
+    damageMultiplier: 10,
+    damage: 15308000000,
+    id: 113,
+    flatId: "item113",
+    cost: 1530800000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/littlebrother.webp",
+  },
+  {
+    name: "Clover",
+    emoji: "☘️",
+    idName: "clover",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 35000,
+    id: 114,
+    flatId: "item114",
+    cost: 250,
+    usedToCraft: [25, 76, 115, 132],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u2618.svg",
+  },
+  {
+    name: "Lucky Charm",
+    emoji: "🍀",
+    idName: "luckycharm",
+    uncraftable: false,
+    attributes: [],
+    lootSources: ["item141"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "rareLootBoost",
+      duration: 3600000,
+      multiplier: 2,
+    },
+    recipe: [
+      [114, 12000],
+      [10, 100],
+      [56, 100],
+      [75, 20],
+      [59, 10],
+      [13, 4],
+      [60, 2],
+      [14, 2],
+    ],
+    id: 115,
+    flatId: "item115",
+    cost: 10000000,
+    usedToCraft: [139],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f340.svg",
+  },
+  {
+    name: "Neptune's Trident",
+    emoji: "🔱",
+    idName: "neptunestrident",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 116,
+    flatId: "item116",
+    cost: 10000000,
+    usedToCraft: [137],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f531.svg",
+  },
+  {
+    name: "Sonar Dish",
+    emoji: "📡",
+    idName: "sonardish",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    recipe: [
+      [94, 20],
+      [8, 10],
+      [29, 2],
+    ],
+    id: 117,
+    flatId: "item117",
+    cost: 103000,
+    usedToCraft: [79, 129, 140],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f4e1.svg",
+  },
+  {
+    name: "Obscure Sigil",
+    emoji: "<:obscuresigil:1325553919820300460>",
+    idName: "obscuresigil",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 1,
+    recipe: [],
+    desc: "Dark, unnatural energies emanate from this chaotic seal. On use, each active non-global Loot Action multiplier boost is extended by a random duration between 1-2 hours.",
+    id: 118,
+    flatId: "item118",
+    cost: 1000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/obscuresigil.webp",
+  },
+  {
+    name: "Blueberry",
+    emoji: "🫐",
+    idName: "blueberry",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 20000,
+    foodTier: 2,
+    petEnergy: 750,
+    id: 119,
+    flatId: "item119",
+    cost: 750,
+    usedToCraft: [76, 127],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1fad0.svg",
+  },
+  {
+    name: "Strawberry",
+    emoji: "🍓",
+    idName: "strawberry",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 168000,
+    foodTier: 2,
+    petEnergy: 7500,
+    id: 120,
+    flatId: "item120",
+    cost: 7500,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f353.svg",
+  },
+  {
+    name: "Kiwi",
+    emoji: "🥝",
+    idName: "kiwi",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 240000,
+    foodTier: 2,
+    petEnergy: 12500,
+    id: 121,
+    flatId: "item121",
+    cost: 12500,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f95d.svg",
+  },
+  {
+    name: "Mango",
+    emoji: "🥭",
+    idName: "mango",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 480000,
+    foodTier: 2,
+    petEnergy: 25000,
+    id: 122,
+    flatId: "item122",
+    cost: 25000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f96d.svg",
+  },
+  {
+    name: "Melon",
+    emoji: "🍈",
+    idName: "melon",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 900000,
+    foodTier: 2,
+    petEnergy: 50000,
+    id: 123,
+    flatId: "item123",
+    cost: 50000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f348.svg",
+  },
+  {
+    name: "Coconut",
+    emoji: "🥥",
+    idName: "coconut",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 10800000,
+    foodTier: 2,
+    petEnergy: 750000,
+    id: 124,
+    flatId: "item124",
+    cost: 750000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f965.svg",
+  },
+  {
+    name: "Pumpkin",
+    emoji: "🎃",
+    idName: "pumpkin",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    recipe: [],
+    growTime: 108000000,
+    foodTier: 2,
+    petEnergy: 7500000,
+    id: 125,
+    flatId: "item125",
+    cost: 7500000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f383.svg",
+  },
+  {
+    name: "Forbidden Knowledge",
+    emoji: "🪬",
+    idName: "forbiddenknowledge",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 1,
+    recipe: [],
+    desc: "It is said that those who acquire the Forbidden Knowledge develop an otherworldly control over eldritch beings. On use, summons a Boss at half health (with half the boss's total damage credited to the user). No base damage is credited, however, meaning the user won't receive Standard Loot unless they attack after the Boss is summoned.",
+    id: 126,
+    flatId: "item126",
+    cost: 750000000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1faac.svg",
+  },
+  {
+    name: "Painted Totem",
+    emoji: "<:paintedtotem:1271475364484485204>",
+    idName: "paintedtotem",
+    uncraftable: false,
+    attributes: [],
+    lootSources: ["item30"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "explore",
+      duration: 900000,
+      multiplier: 2,
+    },
+    recipe: [
+      [75, 1],
+      [119, 5],
+      [5, 3],
+    ],
+    id: 127,
+    flatId: "item127",
+    cost: 54650,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/paintedtotem.webp",
+  },
+  {
+    name: "Nautical Compass",
+    emoji: "🧭",
+    idName: "nauticalcompass",
+    uncraftable: false,
+    attributes: [],
+    lootSources: ["item30"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "fish",
+      duration: 900000,
+      multiplier: 2,
+    },
+    recipe: [
+      [100, 1],
+      [51, 2],
+      [66, 1],
+    ],
+    id: 128,
+    flatId: "item128",
+    cost: 51050,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9ed.svg",
+  },
+  {
+    name: "Fish Finder",
+    emoji: "<:fishfinder:1271475161757126799>",
+    idName: "fishfinder",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "fish",
+      duration: 1800000,
+      multiplier: 2,
+    },
+    recipe: [
+      [117, 1],
+      [63, 2],
+      [103, 10],
+    ],
+    id: 129,
+    flatId: "item129",
+    cost: 532000,
+    usedToCraft: [137],
+    imageUrl: "/assets/game/img/items/webp/fishfinder.webp",
+  },
+  {
+    name: "Sharktooth Necklace",
+    emoji: "<:sharktoothnecklace:1271475431417184307>",
+    idName: "sharktoothnecklace",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "hunt",
+      duration: 1800000,
+      multiplier: 2,
+    },
+    recipe: [
+      [98, 100],
+      [97, 80],
+      [57, 8],
+      [45, 6],
+      [58, 2],
+    ],
+    id: 130,
+    flatId: "item130",
+    cost: 549600,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/sharktoothnecklace.webp",
+  },
+  {
+    name: "Downy Parka",
+    emoji: "🧥",
+    idName: "downyparka",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "explore",
+      duration: 1800000,
+      multiplier: 2,
+    },
+    recipe: [
+      [66, 2500],
+      [6, 45],
+      [39, 15],
+      [21, 2],
+    ],
+    id: 131,
+    flatId: "item131",
+    cost: 546250,
+    usedToCraft: [135],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f9e5.svg",
+  },
+  {
+    name: "Dowsing Rod",
+    emoji: "<:dowsingrod:1325553460183171214>",
+    idName: "dowsingrod",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "mine",
+      duration: 1800000,
+      multiplier: 2,
+    },
+    recipe: [
+      [114, 440],
+      [67, 350],
+      [97, 150],
+      [10, 15],
+      [12, 4],
+    ],
+    id: 132,
+    flatId: "item132",
+    cost: 570000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/dowsingrod.webp",
+  },
+  {
+    name: "Scout Submarine",
+    emoji: "<:scoutsubmarine:1271475397980065803>",
+    idName: "scoutsubmarine",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "fish",
+      duration: 3600000,
+      multiplier: 2,
+    },
+    recipe: [
+      [8, 20],
+      [99, 15],
+      [36, 8],
+      [62, 5],
+      [109, 1],
+    ],
+    id: 133,
+    flatId: "item133",
+    cost: 5932300,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/scoutsubmarine.webp",
+  },
+  {
+    name: "Knife Turret",
+    emoji: "<:knifeturret:1271475252622262437>",
+    idName: "knifeturret",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "hunt",
+      duration: 3600000,
+      multiplier: 2,
+    },
+    recipe: [
+      [3, 1500],
+      [45, 200],
+      [54, 20],
+      [63, 6],
+      [23, 5],
+    ],
+    desc: "You'll wonder why you ever bothered with stabbing something the old fashioned way once you see this chain-fed beaut filet everything in a 50 meter radius.",
+    damageMultiplier: 6,
+    damage: 36063000,
+    id: 134,
+    flatId: "item134",
+    cost: 6010500,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/knifeturret.webp",
+  },
+  {
+    name: "Survival Kit",
+    emoji: "<:survivalkit:1271475563248484414>",
+    idName: "survivalkit",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "explore",
+      duration: 3600000,
+      multiplier: 2,
+    },
+    recipe: [
+      [47, 1100],
+      [69, 680],
+      [71, 440],
+      [82, 240],
+      [51, 30],
+      [65, 12],
+      [17, 10],
+      [42, 1],
+      [22, 4],
+      [131, 2],
+    ],
+    id: 135,
+    flatId: "item135",
+    cost: 4982350,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/survivalkit.webp",
+  },
+  {
+    name: "Mecha Canary",
+    emoji: "<:mechacanary:1271475333513740369>",
+    idName: "mechacanary",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "mine",
+      duration: 3600000,
+      multiplier: 2,
+    },
+    recipe: [
+      [66, 5000],
+      [106, 100],
+      [23, 10],
+      [108, 1],
+    ],
+    id: 136,
+    flatId: "item136",
+    cost: 5739000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/mechacanary.webp",
+  },
+  {
+    name: "Massive Driftnet",
+    emoji: "<:massivedriftnet:1271475284184400043>",
+    idName: "massivedriftnet",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "fish",
+      duration: 7200000,
+      multiplier: 2,
+    },
+    recipe: [
+      [116, 5],
+      [9, 200],
+      [65, 20],
+      [64, 60],
+      [129, 5],
+      [109, 1],
+    ],
+    id: 137,
+    flatId: "item137",
+    cost: 104424800,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/massivedriftnet.webp",
+  },
+  {
+    name: "Mutagenic Sludge",
+    emoji: "<:mutagenicsludge:1325553849611849820>",
+    idName: "mutagenicsludge",
+    uncraftable: false,
+    attributes: ["petHoldable"],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "hunt",
+      duration: 7200000,
+      multiplier: 2,
+    },
+    recipe: [
+      [88, 5],
+      [2, 25000],
+      [50, 20000],
+      [54, 10000],
+      [29, 200],
+      [102, 10],
+    ],
+    desc: "Highly toxic chemicals capable of causing mass wildlife extinction. In smaller doses it can raise the chance of Aura mutations when breeding Pets... (+3x)",
+    id: 138,
+    flatId: "item138",
+    cost: 97900000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/mutagenicsludge.webp",
+  },
+  {
+    name: "Cursed Charm",
+    emoji: "<:cursedcharm:1271475038297522226>",
+    idName: "cursedcharm",
+    uncraftable: false,
+    attributes: ["petHoldable"],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "explore",
+      duration: 7200000,
+      multiplier: 2,
+    },
+    recipe: [
+      [89, 1],
+      [115, 5],
+    ],
+    desc: "Coexisting good and evil energies reveal secrets to those this charm's influence. It's also been known to increase the chances of Skin mutations when breeding Pets... (+3x)",
+    id: 139,
+    flatId: "item139",
+    cost: 100000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/cursedcharm.webp",
+  },
+  {
+    name: "Orbital Mining Laser",
+    emoji: "<:mininglaser:1325553825309921290>",
+    idName: "orbitalmininglaser",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "mine",
+      duration: 7200000,
+      multiplier: 2,
+    },
+    recipe: [
+      [90, 1],
+      [63, 250],
+      [105, 150],
+      [62, 40],
+      [40, 20],
+      [65, 10],
+      [117, 4],
+      [109, 2],
+    ],
+    id: 140,
+    flatId: "item140",
+    cost: 104804600,
+    usedToCraft: [86],
+    imageUrl: "/assets/game/img/items/webp/mininglaser.webp",
+  },
+  {
+    name: "Exquisite Trunk",
+    emoji: "<:exquisitetrunk:1346978605204246591>",
+    idName: "exquisitetrunk",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 10000000,
+    recipe: [],
+    desc: "A decorated trunk that yields exceptionally valuable loot when opened.",
+    id: 141,
+    flatId: "item141",
+    cost: 10000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/exquisitetrunk.webp",
+  },
+  {
+    name: "Magic Conch",
+    emoji: "🐚",
+    idName: "magicconch",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "fish",
+      duration: 14400000,
+      multiplier: 2,
+    },
+    recipe: [],
+    desc: "All hail the Magic Conch.",
+    id: 142,
+    flatId: "item142",
+    cost: 650000000,
+    usedToCraft: [],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@2.047/svg/emoji_u1f41a.svg",
+  },
+  {
+    name: "Untamed Spirit",
+    emoji: "<:untamedspirit:1346979229795094618>",
+    idName: "untamedspirit",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "hunt",
+      duration: 14400000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 143,
+    flatId: "item143",
+    cost: 650000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/untamedspirit.webp",
+  },
+  {
+    name: "Seraphic Clasp",
+    emoji: "<:seraphicclasp:1346979154960318527>",
+    idName: "seraphicclasp",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "explore",
+      duration: 14400000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 144,
+    flatId: "item144",
+    cost: 650000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/seraphicclasp.webp",
+  },
+  {
+    name: "Condemned Skull",
+    emoji: "<:condemnedskull:1346978319048114227>",
+    idName: "condemnedskull",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "mine",
+      duration: 14400000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 145,
+    flatId: "item145",
+    cost: 650000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/condemnedskull.webp",
+  },
+  {
+    name: "Sialogogue",
+    emoji: "<:sialogogue:1370436783115862026>",
+    idName: "sialogogue",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 1,
+    recipe: [],
+    desc: "Massively increases the amount of an Item currently craved by a Pet.",
+    id: 146,
+    flatId: "item146",
+    cost: 400000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/sialogogue.webp",
+  },
+  {
+    name: "Green Gemerald",
+    emoji: "<:greengemerald:1351031047243956307>",
+    idName: "greengemerald",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 147,
+    flatId: "item147",
+    cost: 250000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/greengemerald.webp",
+  },
+  {
+    name: "Amber Gemerald",
+    emoji: "<:ambergemerald:1351030935457628230>",
+    idName: "ambergemerald",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 148,
+    flatId: "item148",
+    cost: 500000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/ambergemerald.webp",
+  },
+  {
+    name: "Purple Gemerald",
+    emoji: "<:purplegemerald:1351031071206019163>",
+    idName: "purplegemerald",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 149,
+    flatId: "item149",
+    cost: 750000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/purplegemerald.webp",
+  },
+  {
+    name: "Red Gemerald",
+    emoji: "<:redgemerald:1351031112012660817>",
+    idName: "redgemerald",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 150,
+    flatId: "item150",
+    cost: 1000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/redgemerald.webp",
+  },
+  {
+    name: "Fragrant Dogrose",
+    emoji: "<:fragrantdogrose:1346978670488719412>",
+    idName: "fragrantdogrose",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    petAdventureBoostEffect: {
+      multiplier: 2,
+      duration: 7200000,
+    },
+    worthPerGainedFromHarvest: 4500000,
+    recipe: [],
+    id: 151,
+    flatId: "item151",
+    cost: 2500000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/fragrantdogrose.webp",
+  },
+  {
+    name: "Mystical Rowan",
+    emoji: "<:mysticalrowan:1346979030821503057>",
+    idName: "mysticalrowan",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    petAdventureBoostEffect: {
+      multiplier: 4,
+      duration: 7200000,
+    },
+    worthPerGainedFromHarvest: 45000000,
+    recipe: [],
+    id: 152,
+    flatId: "item152",
+    cost: 25000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/mysticalrowan.webp",
+  },
+  {
+    name: "Legendary Aguaje",
+    emoji: "<:legendaryaguaje:1346978951062622309>",
+    idName: "legendaryaguaje",
+    uncraftable: true,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    petAdventureBoostEffect: {
+      multiplier: 8,
+      duration: 7200000,
+    },
+    worthPerGainedFromHarvest: 300000000,
+    recipe: [],
+    id: 153,
+    flatId: "item153",
+    cost: 250000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/legendaryaguaje.webp",
+  },
+  {
+    name: "Rainmaking Amulet",
+    emoji: "<:rainmakingamulet:1351031090848071790>",
+    idName: "rainmakingamulet",
+    uncraftable: true,
+    attributes: ["equippable"],
+    lootSources: [],
+    recipe: [],
+    desc: "This vibrant blue trinket reminds you of a tropical ocean. Equipped amulets allow you to make up for lost Farm watering. If an additional water could have occurred since you last tended your farm, an amulet is consumed and the effect is increased. Multiple equipped amulets will stack their effects.",
+    id: 154,
+    flatId: "item154",
+    cost: 7500000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/rainmakingamulet.webp",
+  },
+  {
+    name: "Gilded Manure",
+    emoji: "<:gildedmanure:1351030993464852605>",
+    idName: "gildedmanure",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    farmPlotBoostEffect: {
+      multiplier: 1250,
+      duration: 86400000,
+    },
+    recipe: [],
+    id: 155,
+    flatId: "item155",
+    cost: 1000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/gildedmanure.webp",
+  },
+  {
+    name: "Enriching Fertilizer",
+    emoji: "<:industrialfertilizer:1346978881936293960>",
+    idName: "enrichingfertilizer",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    farmPlotBoostEffect: {
+      multiplier: 5,
+      duration: 43200000,
+    },
+    recipe: [
+      [24, 1440],
+      [67, 100000],
+      [46, 250000],
+    ],
+    id: 156,
+    flatId: "item156",
+    cost: 34250000,
+    usedToCraft: [157],
+    imageUrl: "/assets/game/img/items/webp/industrialfertilizer.webp",
+  },
+  {
+    name: "Experimental Fertilizer",
+    emoji: "<:experimentalfertilizer:1346978532265295942>",
+    idName: "experimentalfertilizer",
+    uncraftable: false,
+    attributes: [],
+    lootSources: [],
+    useLimit: 9007199254740991,
+    farmPlotBoostEffect: {
+      multiplier: 20,
+      duration: 43200000,
+    },
+    recipe: [
+      [156, 1],
+      [88, 5],
+    ],
+    id: 157,
+    flatId: "item157",
+    cost: 84250000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/experimentalfertilizer.webp",
+  },
+  {
+    name: "Auspicious Coin",
+    emoji: "<:auspiciouscoin:1351030962234064896>",
+    idName: "auspiciouscoin",
+    uncraftable: true,
+    attributes: ["equippable"],
+    lootSources: ["rare"],
+    recipe: [],
+    desc: "Bad luck will seem to disappear once this coin is in your possession. If a coinflip is lost while this item is equipped, the loss is prevented. There's a 10% chance this item is consumed each time it's triggered.",
+    id: 158,
+    flatId: "item158",
+    cost: 1000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/auspiciouscoin.webp",
+  },
+  {
+    name: "Atlantic Obol",
+    emoji: "<:atlanticobol:1370436585048244304>",
+    idName: "atlanticobol",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "fish",
+      duration: 28800000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 159,
+    flatId: "item159",
+    cost: 5000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/atlanticobol.webp",
+  },
+  {
+    name: "Hunter's Blind",
+    emoji: "<:huntersblind:1370436692195934208>",
+    idName: "huntersblind",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "hunt",
+      duration: 28800000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 160,
+    flatId: "item160",
+    cost: 5000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/huntersblind.webp",
+  },
+  {
+    name: "Daoic Seal",
+    emoji: "<:daoicseal:1370436665281347765>",
+    idName: "daoicseal",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "explore",
+      duration: 28800000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 161,
+    flatId: "item161",
+    cost: 5000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/daoicseal.webp",
+  },
+  {
+    name: "Subterran Crest",
+    emoji: "<:subterrancrest:1370436820873121832>",
+    idName: "subterrancrest",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    useLimit: 9007199254740991,
+    effect: {
+      type: "actionBoost",
+      action: "mine",
+      duration: 28800000,
+      multiplier: 2,
+    },
+    recipe: [],
+    id: 162,
+    flatId: "item162",
+    cost: 5000000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/subterrancrest.webp",
+  },
+  {
+    name: "Pluperfect Gemerald",
+    emoji: "<:pluperfectgemerald:1370436751096807516>",
+    idName: "pluperfectgemerald",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 163,
+    flatId: "item163",
+    cost: 750000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/pluperfectgemerald.webp",
+  },
+  {
+    name: "Mystical Balls",
+    emoji: "<:mysticalballs:1370436718750076958>",
+    idName: "mysticalballs",
+    uncraftable: true,
+    attributes: [],
+    lootSources: ["rare"],
+    recipe: [],
+    id: 164,
+    flatId: "item164",
+    cost: 250000000,
+    usedToCraft: [],
+    imageUrl: "/assets/game/img/items/webp/mysticalballs.webp",
+  },
+];
+
+export type GameItem = (typeof items)[number];
