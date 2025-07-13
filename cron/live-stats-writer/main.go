@@ -102,13 +102,16 @@ func getItemPrice(ctx context.Context, itemId int) (int, error) {
 		LIMIT 1
 	`
 	row := conn.QueryRow(ctx, query, itemId)
-	var price int
+	var price *int
 	err := row.Scan(&price)
 	if err != nil {
 		log.Printf("Error getting item price: %v", err)
 		return 0, err
 	}
-	return price, nil
+	if price == nil {
+		return 0, nil
+	}
+	return *price, nil
 }
 
 func getItemOpeningPrice(ctx context.Context, itemId int) (int, error) {
@@ -121,13 +124,16 @@ func getItemOpeningPrice(ctx context.Context, itemId int) (int, error) {
 		LIMIT 1
 	`
 	row := conn.QueryRow(ctx, query, itemId)
-	var price int
+	var price *int
 	err := row.Scan(&price)
 	if err != nil {
 		log.Printf("Error getting item opening price: %v", err)
 		return 0, err
 	}
-	return price, nil
+	if price == nil {
+		return 0, nil
+	}
+	return *price, nil
 }
 
 func getItemPriceRange(ctx context.Context, itemId int) (int, int, error) {
@@ -138,14 +144,25 @@ func getItemPriceRange(ctx context.Context, itemId int) (int, int, error) {
 		AND DATE(timestamp) = CURRENT_DATE
 	`
 	row := conn.QueryRow(ctx, query, itemId)
-	var minPrice int
-	var maxPrice int
+	var minPrice *int
+	var maxPrice *int
 	err := row.Scan(&minPrice, &maxPrice)
 	if err != nil {
-		log.Printf("Error getting item lowest price: %v", err)
+		log.Printf("Error getting item price range: %v", err)
 		return 0, 0, err
 	}
-	return minPrice, maxPrice, nil
+	
+	// Handle NULL values
+	min := 0
+	max := 0
+	if minPrice != nil {
+		min = *minPrice
+	}
+	if maxPrice != nil {
+		max = *maxPrice
+	}
+	
+	return min, max, nil
 }
 
 func refreshItemStats(ctx context.Context, itemId int) error {
