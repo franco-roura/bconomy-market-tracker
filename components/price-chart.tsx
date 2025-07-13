@@ -1,7 +1,7 @@
 "use client";
 
 import { ChartContainer } from "@/components/ui/chart";
-import { bcFormatter, localizeUtc } from "@/lib/utils";
+import { bcFormatter } from "@/lib/utils";
 import {
   CartesianGrid,
   ComposedChart,
@@ -13,7 +13,7 @@ import {
 } from "recharts";
 
 type CandlestickData = {
-  timestamp: number;
+  timestamp: string;
   open: number;
   high: number;
   low: number;
@@ -88,14 +88,22 @@ export function PriceChart(props: PriceChartProps) {
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
-      const time = new Date(label).toLocaleTimeString() + " UTC";
+      const utcString = new Date(label).toLocaleTimeString([], {
+        timeZone: "UTC",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      const localString = new Date(label).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
       return (
         <div className="bg-white p-2 border rounded shadow">
           <p className="text-sm">
-            <strong>{time}</strong>
+            <strong>{utcString} UTC</strong>
             <br />
             <span className="text-xs text-gray-500">
-              ({localizeUtc(label).toLocaleTimeString()} your time)
+              ({localString} your time)
             </span>
           </p>
           <hr className="my-2" />
@@ -128,9 +136,14 @@ export function PriceChart(props: PriceChartProps) {
         <ComposedChart data={props.data}>
           <XAxis
             dataKey="timestamp"
-            type="number"
+            type="category"
             domain={["dataMin - 1080000", "dataMax + 1080000"]}
-            tickFormatter={(value) => localizeUtc(value).toLocaleTimeString()}
+            tickFormatter={(value) =>
+              new Date(value).toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              })
+            }
           />
           <YAxis domain={domain} tickFormatter={bcFormatter.format} />
           <CartesianGrid strokeDasharray="3 3" />

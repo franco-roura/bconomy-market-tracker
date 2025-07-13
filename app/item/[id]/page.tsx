@@ -21,8 +21,18 @@ export default async function Home(props: Props) {
   const { id } = await props.params;
   const itemIdInt = parseInt(id ?? "111");
   const selectedItem = items[itemIdInt];
-  let utcMidnight = new Date();
-  utcMidnight.setUTCHours(0, 0, 0, 0);
+  const now = new Date();
+  const utcMidnight = new Date(
+    Date.UTC(
+      now.getUTCFullYear(),
+      now.getUTCMonth(),
+      now.getUTCDate(),
+      0,
+      0,
+      0,
+      0,
+    ),
+  );
 
   const currentPricesPromise = db
     .selectFrom("item_price_candle")
@@ -88,7 +98,7 @@ export default async function Home(props: Props) {
               data={currentPrices.map((price) => ({
                 id: price.id,
                 item_id: price.item_id,
-                timestamp: price.timestamp.getTime(),
+                timestamp: price.timestamp.toISOString(),
                 open: parseInt(price.open),
                 high: parseInt(price.high),
                 low: parseInt(price.low),
