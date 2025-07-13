@@ -1,6 +1,7 @@
 "use client";
 
 import { ChartContainer } from "@/components/ui/chart";
+import { localizeUtc } from "@/lib/utils";
 import {
   CartesianGrid,
   ComposedChart,
@@ -24,6 +25,11 @@ type CandlestickData = {
 type PriceChartProps = {
   data: Array<CandlestickData>;
 };
+
+const bcFormatter = Intl.NumberFormat("en", {
+  notation: "compact",
+  minimumFractionDigits: 2,
+});
 
 // Custom candlestick shape for Scatter
 const CandlestickShape = (props: {
@@ -88,33 +94,39 @@ export function PriceChart(props: PriceChartProps) {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       const time = new Date(label).toLocaleTimeString() + " UTC";
-      const formatter = Intl.NumberFormat("en", {
-        notation: "compact",
-        minimumFractionDigits: 2,
-      });
       return (
         <div className="bg-white p-2 border rounded shadow">
           <p className="text-sm">
-            <strong>Time:</strong> {time}
+            <strong>{time}</strong>
+            <br />
+            <span className="text-xs text-gray-500">
+              ({localizeUtc(label).toLocaleTimeString()} your time)
+            </span>
+          </p>
+          <hr className="my-2" />
+          <p className="text-sm">
+            <strong>Open:</strong> {bcFormatter.format(data.open)}
           </p>
           <p className="text-sm">
-            <strong>Open:</strong> {formatter.format(data.open)}
+            <strong>High:</strong> {bcFormatter.format(data.high)}
           </p>
           <p className="text-sm">
-            <strong>High:</strong> {formatter.format(data.high)}
+            <strong>Low:</strong> {bcFormatter.format(data.low)}
           </p>
           <p className="text-sm">
-            <strong>Low:</strong> {formatter.format(data.low)}
-          </p>
-          <p className="text-sm">
-            <strong>Close:</strong> {formatter.format(data.close)}
+            <strong>Close:</strong> {bcFormatter.format(data.close)}
           </p>
         </div>
       );
     }
     return null;
   };
-
+  const domain = props.data.reduce(
+    (acc, curr) => {
+      return [Math.min(acc[0], curr.low), Math.max(acc[1], curr.high)];
+    },
+    [props.data[0].low, props.data[0].high]
+  );
   return (
     <ChartContainer config={{}} className="min-h-[200px] w-full">
       <ResponsiveContainer width="100%" height={300}>
@@ -122,18 +134,10 @@ export function PriceChart(props: PriceChartProps) {
           <XAxis
             dataKey="timestamp"
             type="number"
-            domain={["dataMin", "dataMax"]}
-            tickFormatter={(value) => {
-              // Get the timezone offset in minutes and convert to milliseconds
-              const date = new Date(value);
-              const timezoneOffsetMs = date.getTimezoneOffset() * 60 * 1000;
-              // Adjust the timestamp by the timezone offset to get the correct UTC time
-              const adjustedValue = value - timezoneOffsetMs;
-              const adjustedDate = new Date(adjustedValue);
-              return adjustedDate.toLocaleTimeString();
-            }}
+            domain={["dataMin - 1080000", "dataMax + 1080000"]}
+            tickFormatter={(value) => localizeUtc(value).toLocaleTimeString()}
           />
-          <YAxis domain={["dataMin - 10", "dataMax + 10"]} />
+          <YAxis domain={domain} tickFormatter={bcFormatter.format} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip content={<CustomTooltip />} />
           <Scatter data={props.data} dataKey="close" shape={CandlestickShape} />
