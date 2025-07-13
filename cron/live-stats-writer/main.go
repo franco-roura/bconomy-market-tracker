@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/jackc/pgx/v5"
@@ -257,14 +258,29 @@ func refreshItemStats(ctx context.Context, itemId int) error {
 }
 
 func handleRequest(ctx context.Context, event json.RawMessage) error {
+	var payload struct {
+		BatchNumber string `json:"batchNumber"`
+	}
+	if err := json.Unmarshal(event, &payload); err != nil {
+		log.Printf("Error unmarshalling event: %v", err)
+		return err
+	}
+	batchNumber, err := strconv.Atoi(payload.BatchNumber)
+	if err != nil {
+		log.Printf("Error converting batch number: %v", err)
+		return err
+	}
+	log.Printf("Batch number: %d", batchNumber)
 	errGroup, _ := errgroup.WithContext(ctx)
 	errGroup.SetLimit(50)
-	for i := range 165 {
+	firstId := batchNumber * 83
+	lastId := firstId + 82
+	for i := firstId; i <= lastId; i++ {
 		errGroup.Go(func() error {
 			return refreshItemStats(ctx, i)
 		})
 	}
-	err := errGroup.Wait()
+	err = errGroup.Wait()
 	if err != nil {
 		log.Printf("Error refreshing item stats: %v", err)
 		return err

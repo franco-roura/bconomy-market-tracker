@@ -49,7 +49,10 @@ export default $config({
         DB_URL: process.env.DB_URL,
       },
     });
-    // TODO cron
+    new sst.aws.Cron("MakeCandlesCron", {
+      function: candleMakerLambda.arn,
+      schedule: "cron(1/5 * * * ? *)", // Runs at minute 1, 6, 11, 16, etc.
+    });
     const liveStatsWriterLambda = new sst.aws.Function("LiveStatsWriter", {
       runtime: "go",
       handler: "./cron/live-stats-writer/main.go",
@@ -61,7 +64,20 @@ export default $config({
         BCONOMY_API_KEY: process.env.BCONOMY_API_KEY,
       },
     });
-    // TODO cron
+    new sst.aws.Cron("LiveStatsWriterCron", {
+      function: liveStatsWriterLambda.arn,
+      schedule: "cron(2,32 * * * ? *)", // Runs twice an hour
+      event: {
+        batchNumber: "0",
+      },
+    });
+    new sst.aws.Cron("LiveStatsWriterCron", {
+      function: liveStatsWriterLambda.arn,
+      schedule: "cron(4,34 * * * ? *)", // Runs twice an hour
+      event: {
+        batchNumber: "1",
+      },
+    });
     new sst.aws.Nextjs("BconomyMarketTracker", {
       environment: {
         DB_URL: process.env.DB_URL,

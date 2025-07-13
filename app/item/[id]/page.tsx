@@ -33,6 +33,12 @@ export default async function Home(props: Props) {
     .orderBy("timestamp", "asc")
     .execute();
 
+  const currentStats = await db
+    .selectFrom("live_stats")
+    .selectAll()
+    .where("item_id", "=", itemIdInt)
+    .executeTakeFirst();
+
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="text-center space-y-2">
@@ -86,20 +92,11 @@ export default async function Home(props: Props) {
       </div>
       <ItemStats
         itemId={itemIdInt}
-        lastKnownPrice={parseInt(currentPrices[currentPrices.length - 1].close)}
-        openingPrice={parseInt(currentPrices[0].open)}
-        highestPriceToday={currentPrices.reduce(
-          (max, price) => Math.max(max, parseInt(price.high)),
-          0
-        )}
-        lowestPriceToday={currentPrices.reduce(
-          (min, price) => Math.min(min, parseInt(price.low)),
-          0
-        )}
-        supply={currentPrices.reduce(
-          (sum, price) => sum + parseInt(price.close) * 1000,
-          0
-        )}
+        lastKnownPrice={parseInt(currentStats?.last_known_price ?? "0")}
+        openingPrice={parseInt(currentStats?.opening_price ?? "0")}
+        highestPriceToday={parseInt(currentStats?.highest_price_today ?? "0")}
+        lowestPriceToday={parseInt(currentStats?.lowest_price_today ?? "0")}
+        supply={parseInt(currentStats?.supply ?? "0")}
       />
     </div>
   );
