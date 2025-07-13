@@ -26,7 +26,7 @@ export default $config({
     }
     const scraperLambda = new sst.aws.Function("ScrapeMarketValues", {
       runtime: "go",
-      handler: "./cron/main",
+      handler: "./cron/scraper/main.go",
       timeout: "5 seconds",
       architecture: "arm64",
       memory: "128 MB",
@@ -38,6 +38,16 @@ export default $config({
     new sst.aws.Cron("ScrapeMarketValuesCron", {
       function: scraperLambda.arn,
       schedule: "rate(5 minutes)",
+    });
+    const candleMakerLambda = new sst.aws.Function("MakeCandles", {
+      runtime: "go",
+      handler: "./cron/candle-maker/main.go",
+      timeout: "5 seconds",
+      architecture: "arm64",
+      memory: "128 MB",
+      environment: {
+        DB_URL: process.env.DB_URL,
+      },
     });
     new sst.aws.Nextjs("BconomyMarketTracker", {
       environment: {

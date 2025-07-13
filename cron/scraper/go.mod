@@ -1,8 +1,11 @@
-module main
+module scraper
 
 go 1.24.0
 
-require github.com/aws/aws-lambda-go v1.49.0
+require (
+	github.com/aws/aws-lambda-go v1.49.0
+	github.com/jackc/pgx/v5 v5.7.5
+)
 
 require (
 	github.com/jackc/pgpassfile v1.0.0 // indirect
@@ -12,5 +15,3 @@ require (
 	golang.org/x/sync v0.13.0 // indirect
 	golang.org/x/text v0.24.0 // indirect
 )
-
-require github.com/jackc/pgx/v5 v5.7.5

@@ -9,6 +9,10 @@ declare module "sst" {
       "type": "sst.aws.Nextjs"
       "url": string
     }
+    "MakeCandles": {
+      "name": string
+      "type": "sst.aws.Function"
+    }
     "ScrapeMarketValues": {
       "name": string
       "type": "sst.aws.Function"
