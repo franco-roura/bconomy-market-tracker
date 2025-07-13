@@ -1,5 +1,6 @@
 import { db } from "@/app/db/client";
 import { items } from "@/app/db/items";
+import { PriceChart } from "@/components/price-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -16,12 +17,16 @@ export default async function Home(props: Props) {
   const { id } = await props.params;
   const itemIdInt = parseInt(id ?? "111");
   const selectedItem = items[itemIdInt];
+  let utcMidnight = new Date();
+  utcMidnight.setUTCHours(0, 0, 0, 0);
+  console.log(utcMidnight);
   const currentPrices = await db
-    .selectFrom("item_price_history")
+    .selectFrom("item_price_candle")
     .selectAll()
     .where("item_id", "=", itemIdInt)
-    .orderBy("timestamp", "desc")
-    .limit(10)
+    .where("interval", "=", "1h")
+    .where("timestamp", ">=", utcMidnight)
+    .orderBy("timestamp", "asc")
     .execute();
 
   return (
@@ -62,7 +67,19 @@ export default async function Home(props: Props) {
               />
             </CardTitle>
           </CardHeader>
-          <CardContent>{/* <PriceChart item={selectedItem} /> */}</CardContent>
+          <CardContent>
+            <PriceChart
+              data={currentPrices.map((price) => ({
+                id: price.id,
+                item_id: price.item_id,
+                timestamp: price.timestamp.getTime(),
+                open: parseInt(price.open),
+                high: parseInt(price.high),
+                low: parseInt(price.low),
+                close: parseInt(price.close),
+              }))}
+            />
+          </CardContent>
         </Card>
       </div>
 

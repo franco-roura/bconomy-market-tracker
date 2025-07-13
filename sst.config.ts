@@ -42,7 +42,7 @@ export default $config({
     const candleMakerLambda = new sst.aws.Function("MakeCandles", {
       runtime: "go",
       handler: "./cron/candle-maker/main.go",
-      timeout: "5 seconds",
+      timeout: "15 seconds",
       architecture: "arm64",
       memory: "128 MB",
       environment: {
