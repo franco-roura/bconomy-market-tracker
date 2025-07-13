@@ -173,9 +173,11 @@ done:
 	// Now aggregate the price data into candles
 	type Candle struct {
 		Open      int
+		OpenTime  time.Time
 		High      int
 		Low       int
 		Close     int
+		CloseTime time.Time
 		Timestamp time.Time
 	}
 
@@ -192,13 +194,13 @@ done:
 
 		candle, exists := hourlyCandles[priceData.ItemID][hourlyTruncatedTimestamp]
 		if !exists {
-			// First price for this hour - since we're processing in DESC order,
-			// this is the latest price (close price)
 			hourlyCandles[priceData.ItemID][hourlyTruncatedTimestamp] = &Candle{
 				Open:      priceData.Price,
+				OpenTime:  priceData.Timestamp,
 				High:      priceData.Price,
 				Low:       priceData.Price,
 				Close:     priceData.Price,
+				CloseTime: priceData.Timestamp,
 				Timestamp: hourlyTruncatedTimestamp,
 			}
 		} else {
@@ -209,8 +211,14 @@ done:
 			if priceData.Price < candle.Low {
 				candle.Low = priceData.Price
 			}
-			// Since we're processing in DESC order (newest first),
-			// the first price we saw was the close price, so we don't update it
+			if priceData.Timestamp.After(candle.CloseTime) {
+				candle.Close = priceData.Price
+				candle.CloseTime = priceData.Timestamp
+			}
+			if priceData.Timestamp.Before(candle.OpenTime) {
+				candle.Open = priceData.Price
+				candle.OpenTime = priceData.Timestamp
+			}
 		}
 	}
 
@@ -257,7 +265,13 @@ done:
 
 				query := fmt.Sprintf(`
 				INSERT INTO item_price_candle (item_id, open, high, low, close, timestamp, interval) 
-				VALUES %s ON CONFLICT (item_id, timestamp, interval) DO NOTHING;
+				VALUES %s ON CONFLICT (item_id, timestamp, interval) 
+				DO UPDATE SET 
+					open = EXCLUDED.open,
+					high = EXCLUDED.high,
+					low = EXCLUDED.low,
+					close = EXCLUDED.close,
+					timestamp = EXCLUDED.timestamp;
 			`, strings.Join(values, ", "))
 
 				_, err = conn.Exec(ctx, query, args...)
