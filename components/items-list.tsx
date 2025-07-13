@@ -16,7 +16,6 @@ type ItemCardProps = {
 };
 
 const ItemCard = (props: ItemCardProps) => {
-
   return (
     <Link key={props.item.id} href={`/item/${props.item.id}`}>
       <Button
@@ -27,7 +26,7 @@ const ItemCard = (props: ItemCardProps) => {
           <Image
             width={24}
             height={24}
-            src={props.item.imageUrl}
+            src={`/assets/game/items/${props.item.id}.webp`}
             alt={props.item.name}
             className="w-6 h-6"
           />

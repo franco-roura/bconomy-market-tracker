@@ -62,7 +62,7 @@ export default async function Home(props: Props) {
               <Image
                 width={24}
                 height={24}
-                src={selectedItem.imageUrl}
+                src={`/assets/game/items/${selectedItem.id}.webp`}
                 alt={selectedItem.name}
                 className="w-6 h-6"
               />
