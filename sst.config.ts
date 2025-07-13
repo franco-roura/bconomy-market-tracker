@@ -53,7 +53,7 @@ export default $config({
     const liveStatsWriterLambda = new sst.aws.Function("LiveStatsWriter", {
       runtime: "go",
       handler: "./cron/live-stats-writer/main.go",
-      timeout: "15 seconds",
+      timeout: "30 seconds",
       architecture: "arm64",
       memory: "128 MB",
       environment: {

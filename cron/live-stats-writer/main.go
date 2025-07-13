@@ -13,11 +13,12 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"golang.org/x/sync/errgroup"
 )
 
 type MarketListings struct {
-	ItemId int `json:"id"`
-	Price int `json:"price"`
+	ItemId   int `json:"id"`
+	Price    int `json:"price"`
 	Quantity int `json:"amount"`
 }
 
@@ -43,30 +44,30 @@ func getMarketListings(ctx context.Context, itemId int) ([]MarketListings, error
 	log.Printf("Getting market listings for item %d", itemId)
 	apiKey := os.Getenv("BCONOMY_API_KEY")
 	url := "https://bconomy.net/api/data"
-	
+
 	// Create request body
 	requestBody := map[string]interface{}{
-		"type": "marketListings",
+		"type":   "marketListings",
 		"itemId": itemId,
-	  }
-	
+	}
+
 	jsonBody, err := json.Marshal(requestBody)
 	if err != nil {
 		log.Printf("Error marshaling request body: %v", err)
 		return []MarketListings{}, err
 	}
-	
+
 	// Create HTTP request
 	req, err := http.NewRequestWithContext(ctx, "POST", url, bytes.NewBuffer(jsonBody))
 	if err != nil {
 		log.Printf("Error creating request: %v", err)
 		return []MarketListings{}, err
 	}
-	
+
 	// Set headers
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("x-api-key", apiKey)
-	
+
 	// Make the request
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -75,7 +76,7 @@ func getMarketListings(ctx context.Context, itemId int) ([]MarketListings, error
 		return []MarketListings{}, err
 	}
 	defer resp.Body.Close()
-	
+
 	// Parse response into JSON object
 	var parsedData []MarketListings
 	if err := json.NewDecoder(resp.Body).Decode(&parsedData); err != nil {
@@ -88,7 +89,6 @@ func getMarketListings(ctx context.Context, itemId int) ([]MarketListings, error
 		log.Printf("Response: %v", string(body))
 		return []MarketListings{}, err
 	}
-	log.Printf("Market listings fetched")
 	return parsedData, nil
 }
 
@@ -107,7 +107,6 @@ func getItemPrice(ctx context.Context, itemId int) (int, error) {
 		log.Printf("Error getting item price: %v", err)
 		return 0, err
 	}
-	log.Printf("Item price fetched")
 	return price, nil
 }
 
@@ -127,7 +126,6 @@ func getItemOpeningPrice(ctx context.Context, itemId int) (int, error) {
 		log.Printf("Error getting item opening price: %v", err)
 		return 0, err
 	}
-	log.Printf("Item opening price fetched")
 	return price, nil
 }
 
@@ -146,11 +144,11 @@ func getItemPriceRange(ctx context.Context, itemId int) (int, int, error) {
 		log.Printf("Error getting item lowest price: %v", err)
 		return 0, 0, err
 	}
-	log.Printf("Item price range fetched")
 	return minPrice, maxPrice, nil
 }
 
-func handleRequest(ctx context.Context, event json.RawMessage) error {
+func refreshItemStats(ctx context.Context, itemId int) error {
+	log.Printf("Refreshing live stats for item %d", itemId)
 	// Create channels to receive results from goroutines
 	marketListingsChan := make(chan []MarketListings, 1)
 	priceChan := make(chan int, 1)
@@ -163,7 +161,7 @@ func handleRequest(ctx context.Context, event json.RawMessage) error {
 
 	// Launch goroutines to fetch data in parallel
 	go func() {
-		marketListings, err := getMarketListings(ctx, 111)
+		marketListings, err := getMarketListings(ctx, itemId)
 		if err != nil {
 			errorChan <- err
 			return
@@ -172,7 +170,7 @@ func handleRequest(ctx context.Context, event json.RawMessage) error {
 	}()
 
 	go func() {
-		price, err := getItemPrice(ctx, 111)
+		price, err := getItemPrice(ctx, itemId)
 		if err != nil {
 			errorChan <- err
 			return
@@ -181,7 +179,7 @@ func handleRequest(ctx context.Context, event json.RawMessage) error {
 	}()
 
 	go func() {
-		openingPrice, err := getItemOpeningPrice(ctx, 111)
+		openingPrice, err := getItemOpeningPrice(ctx, itemId)
 		if err != nil {
 			errorChan <- err
 			return
@@ -190,7 +188,7 @@ func handleRequest(ctx context.Context, event json.RawMessage) error {
 	}()
 
 	go func() {
-		minPrice, maxPrice, err := getItemPriceRange(ctx, 111)
+		minPrice, maxPrice, err := getItemPriceRange(ctx, itemId)
 		if err != nil {
 			errorChan <- err
 			return
@@ -234,27 +232,43 @@ func handleRequest(ctx context.Context, event json.RawMessage) error {
 	}
 	defer tx.Rollback(ctx)
 	query := `
-		INSERT INTO live_stats (item_id, last_known_price, opening_price, highest_price_today, lowest_price_today, supply)
-		VALUES ($1, $2, $3, $4, $5, $6)
-		ON CONFLICT (item_id) DO UPDATE SET
-			last_known_price = $2,
-			opening_price = $3,
-			highest_price_today = $4,
-			lowest_price_today = $5,
-			supply = $6
-	`
-	_, err = tx.Exec(ctx, query, 111, price, openingPrice, maxPrice, minPrice, supply)
+	INSERT INTO live_stats (item_id, last_known_price, opening_price, highest_price_today, lowest_price_today, supply)
+	VALUES ($1, $2, $3, $4, $5, $6)
+	ON CONFLICT (item_id) DO UPDATE SET
+		last_known_price = $2,
+		opening_price = $3,
+		highest_price_today = $4,
+		lowest_price_today = $5,
+		supply = $6
+`
+	_, err = tx.Exec(ctx, query, itemId, price, openingPrice, maxPrice, minPrice, supply)
 	if err != nil {
 		log.Printf("Error inserting live stats: %v", err)
 		return err
 	}
-	
+
 	// Commit the transaction
 	if err := tx.Commit(ctx); err != nil {
 		log.Printf("Error committing transaction: %v", err)
 		return err
 	}
-	
+	log.Printf("Live stats refreshed for item %d", itemId)
+	return nil
+}
+
+func handleRequest(ctx context.Context, event json.RawMessage) error {
+	errGroup, _ := errgroup.WithContext(ctx)
+	errGroup.SetLimit(50)
+	for i := range 165 {
+		errGroup.Go(func() error {
+			return refreshItemStats(ctx, i)
+		})
+	}
+	err := errGroup.Wait()
+	if err != nil {
+		log.Printf("Error refreshing item stats: %v", err)
+		return err
+	}
 	return nil
 }
 
