@@ -40,6 +40,7 @@ func init() {
 }
 
 func getMarketListings(ctx context.Context, itemId int) ([]MarketListings, error) {
+	log.Printf("Getting market listings for item %d", itemId)
 	apiKey := os.Getenv("BCONOMY_API_KEY")
 	url := "https://bconomy.net/api/data"
 	
@@ -87,11 +88,12 @@ func getMarketListings(ctx context.Context, itemId int) ([]MarketListings, error
 		log.Printf("Response: %v", string(body))
 		return []MarketListings{}, err
 	}
-
+	log.Printf("Market listings fetched")
 	return parsedData, nil
 }
 
 func getItemPrice(ctx context.Context, itemId int) (int, error) {
+	log.Printf("Getting item price for item %d", itemId)
 	query := `
 		SELECT price FROM item_price_history
 		WHERE item_id = $1
@@ -105,10 +107,12 @@ func getItemPrice(ctx context.Context, itemId int) (int, error) {
 		log.Printf("Error getting item price: %v", err)
 		return 0, err
 	}
+	log.Printf("Item price fetched")
 	return price, nil
 }
 
 func getItemOpeningPrice(ctx context.Context, itemId int) (int, error) {
+	log.Printf("Getting item opening price for item %d", itemId)
 	query := `
 		SELECT price FROM item_price_history
 		WHERE item_id = $1
@@ -123,10 +127,12 @@ func getItemOpeningPrice(ctx context.Context, itemId int) (int, error) {
 		log.Printf("Error getting item opening price: %v", err)
 		return 0, err
 	}
+	log.Printf("Item opening price fetched")
 	return price, nil
 }
 
 func getItemPriceRange(ctx context.Context, itemId int) (int, int, error) {
+	log.Printf("Getting item price range for item %d", itemId)
 	query := `
 		SELECT MIN(price), MAX(price) FROM item_price_history
 		WHERE item_id = $1
@@ -140,38 +146,86 @@ func getItemPriceRange(ctx context.Context, itemId int) (int, int, error) {
 		log.Printf("Error getting item lowest price: %v", err)
 		return 0, 0, err
 	}
+	log.Printf("Item price range fetched")
 	return minPrice, maxPrice, nil
 }
 
-func handleRequest(ctx context.Context, event json.RawMessage) error {	// Get the current market listings for the item
-	marketListings, err := getMarketListings(ctx, 111)
-	if err != nil {
-		log.Printf("Error getting market listings: %v", err)
-		return err
+func handleRequest(ctx context.Context, event json.RawMessage) error {
+	// Create channels to receive results from goroutines
+	marketListingsChan := make(chan []MarketListings, 1)
+	priceChan := make(chan int, 1)
+	openingPriceChan := make(chan int, 1)
+	priceRangeChan := make(chan struct {
+		min int
+		max int
+	}, 1)
+	errorChan := make(chan error, 4)
+
+	// Launch goroutines to fetch data in parallel
+	go func() {
+		marketListings, err := getMarketListings(ctx, 111)
+		if err != nil {
+			errorChan <- err
+			return
+		}
+		marketListingsChan <- marketListings
+	}()
+
+	go func() {
+		price, err := getItemPrice(ctx, 111)
+		if err != nil {
+			errorChan <- err
+			return
+		}
+		priceChan <- price
+	}()
+
+	go func() {
+		openingPrice, err := getItemOpeningPrice(ctx, 111)
+		if err != nil {
+			errorChan <- err
+			return
+		}
+		openingPriceChan <- openingPrice
+	}()
+
+	go func() {
+		minPrice, maxPrice, err := getItemPriceRange(ctx, 111)
+		if err != nil {
+			errorChan <- err
+			return
+		}
+		priceRangeChan <- struct {
+			min int
+			max int
+		}{minPrice, maxPrice}
+	}()
+
+	// Collect results from all goroutines
+	var marketListings []MarketListings
+	var price, openingPrice, minPrice, maxPrice int
+
+	// Wait for all goroutines to complete and collect results
+	for range 4 {
+		select {
+		case err := <-errorChan:
+			log.Printf("Error in goroutine: %v", err)
+			return err
+		case marketListings = <-marketListingsChan:
+		case price = <-priceChan:
+		case openingPrice = <-openingPriceChan:
+		case priceRange := <-priceRangeChan:
+			minPrice = priceRange.min
+			maxPrice = priceRange.max
+		}
 	}
+
 	// Get the supply with a for loop
 	supply := 0
 	for _, listing := range marketListings {
 		supply += listing.Quantity
 	}
-	// Get the current price for the item from db
-	price, err := getItemPrice(ctx, 111)
-	if err != nil {
-		log.Printf("Error getting item price: %v", err)
-		return err
-	}
-	// Get the opening price for the item from db
-	openingPrice, err := getItemOpeningPrice(ctx, 111)
-	if err != nil {
-		log.Printf("Error getting item opening price: %v", err)
-		return err
-	}
-	// Get today's price range for the item from db
-	minPrice, maxPrice, err := getItemPriceRange(ctx, 111)
-	if err != nil {
-		log.Printf("Error getting item lowest price: %v", err)
-		return err
-	}
+
 	// Insert the data into the db
 	tx, err := conn.Begin(ctx)
 	if err != nil {
