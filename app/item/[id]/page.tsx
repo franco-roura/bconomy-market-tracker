@@ -39,8 +39,8 @@ export default async function Home(props: Props) {
     .selectAll()
     .where("item_id", "=", itemIdInt)
     .where("interval", "=", "1h")
-    .where("timestamp", ">=", utcMidnight)
-    .orderBy("timestamp", "asc")
+    .orderBy("timestamp", "desc")
+    .limit(24)
     .execute();
 
   const currentStatsPromise = db.selectFrom("live_stats").selectAll().execute();
@@ -95,15 +95,17 @@ export default async function Home(props: Props) {
           </CardHeader>
           <CardContent>
             <PriceChart
-              data={currentPrices.map((price) => ({
-                id: price.id,
-                item_id: price.item_id,
-                timestamp: price.timestamp.toISOString(),
-                open: parseInt(price.open),
-                high: parseInt(price.high),
-                low: parseInt(price.low),
-                close: parseInt(price.close),
-              }))}
+              data={currentPrices
+                .sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime())
+                .map((price) => ({
+                  id: price.id,
+                  item_id: price.item_id,
+                  timestamp: price.timestamp.toISOString(),
+                  open: parseInt(price.open),
+                  high: parseInt(price.high),
+                  low: parseInt(price.low),
+                  close: parseInt(price.close),
+                }))}
             />
           </CardContent>
         </Card>

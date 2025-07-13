@@ -124,20 +124,35 @@ export function PriceChart(props: PriceChartProps) {
     }
     return null;
   };
-  const domain = props.data.reduce(
+  const verticalDomain = props.data.reduce(
     (acc, curr) => {
       return [Math.min(acc[0], curr.low), Math.max(acc[1], curr.high)];
     },
     [props.data[0]?.low ?? 0, props.data[0]?.high ?? 0],
+  );
+  const horizontalDomain = props.data.reduce(
+    (acc, curr) => {
+      return [
+        Math.min(acc[0], new Date(curr.timestamp).getTime()),
+        Math.max(acc[1], new Date(curr.timestamp).getTime()),
+      ];
+    },
+    [
+      new Date(props.data[0]?.timestamp).getTime(),
+      new Date(props.data[0]?.timestamp).getTime(),
+    ],
   );
   return (
     <ChartContainer config={{}} className="min-h-[200px] w-full">
       <ResponsiveContainer width="100%" height={300}>
         <ComposedChart data={props.data}>
           <XAxis
-            dataKey="timestamp"
-            type="category"
-            domain={["dataMin - 1080000", "dataMax + 1080000"]}
+            dataKey={(data) => new Date(data.timestamp).getTime()}
+            type="number"
+            domain={[
+              horizontalDomain[0] - 30 * 60 * 1000,
+              horizontalDomain[1] + 30 * 60 * 1000,
+            ]}
             tickFormatter={(value) =>
               new Date(value).toLocaleTimeString([], {
                 hour: "2-digit",
@@ -145,7 +160,7 @@ export function PriceChart(props: PriceChartProps) {
               })
             }
           />
-          <YAxis domain={domain} tickFormatter={bcFormatter.format} />
+          <YAxis domain={verticalDomain} tickFormatter={bcFormatter.format} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip content={<CustomTooltip />} />
           <Scatter data={props.data} dataKey="close" shape={CandlestickShape} />
