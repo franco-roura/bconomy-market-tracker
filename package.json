@@ -8,7 +8,8 @@
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
     "start": "next start",
-    "db:gen": "kysely-codegen --dialect postgres"
+    "db:gen": "kysely-codegen --dialect postgres",
+    "db:migrate": "bun run app/db/migrate.ts"
   },
   "dependencies": {
     "@radix-ui/react-scroll-area": "^1.2.9",
