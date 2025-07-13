@@ -18,15 +18,17 @@ export const ItemStats = (props: Props) => {
   const firstPrice = props.openingPrice;
   const lastPrice = props.lastKnownPrice;
   const priceChange = lastPrice - firstPrice;
-  const priceChangePercent = ((priceChange / firstPrice) * 100);
+  const priceChangePercent = (priceChange / firstPrice) * 100;
 
   // Calculate min/max prices
   const minPrice = props.lowestPriceToday;
   const maxPrice = props.highestPriceToday;
 
   const getPriceChangeIcon = () => {
-    if (priceChange > 0) return <TrendingUp className="h-4 w-4 text-green-500" />;
-    if (priceChange < 0) return <TrendingDown className="h-4 w-4 text-red-500" />;
+    if (priceChange > 0)
+      return <TrendingUp className="h-4 w-4 text-green-500" />;
+    if (priceChange < 0)
+      return <TrendingDown className="h-4 w-4 text-red-500" />;
     return <Minus className="h-4 w-4 text-muted-foreground" />;
   };
 
@@ -41,20 +43,26 @@ export const ItemStats = (props: Props) => {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Current Price</CardTitle>
-            <Image
-                src={`/assets/game/items/${props.itemId}.webp`}
-                alt={`${items[props.itemId].name}`}
-                width={20}
-                height={20}
-                className="w-5 h-5"
-            />
+          <Image
+            src={`/assets/game/items/${props.itemId}.webp`}
+            alt={`${items[props.itemId].name}`}
+            width={20}
+            height={20}
+            className="w-5 h-5"
+          />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">{bcFormatter.format(props.lastKnownPrice)} BC</div>
-          <div className={`flex items-center space-x-1 text-sm ${getPriceChangeColor()}`}>
+          <div className="text-2xl font-bold">
+            {bcFormatter.format(props.lastKnownPrice)} BC
+          </div>
+          <div
+            className={`flex items-center space-x-1 text-sm ${getPriceChangeColor()}`}
+          >
             {getPriceChangeIcon()}
             <span>
-              {priceChange >= 0 ? "+" : ""}{bcFormatter.format(priceChange)} BC ({priceChangePercent.toFixed(2)}%)
+              {priceChange >= 0 ? "+" : ""}
+              {bcFormatter.format(priceChange)} BC (
+              {priceChangePercent.toFixed(2)}%)
             </span>
           </div>
         </CardContent>
@@ -66,7 +74,9 @@ export const ItemStats = (props: Props) => {
           <TrendingUp className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">{bcFormatter.format(maxPrice)} BC</div>
+          <div className="text-2xl font-bold">
+            {bcFormatter.format(maxPrice)} BC
+          </div>
           <p className="text-xs text-muted-foreground">Highest price today</p>
         </CardContent>
       </Card>
@@ -77,18 +87,24 @@ export const ItemStats = (props: Props) => {
           <TrendingDown className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">{bcFormatter.format(minPrice)} BC</div>
+          <div className="text-2xl font-bold">
+            {bcFormatter.format(minPrice)} BC
+          </div>
           <p className="text-xs text-muted-foreground">Lowest price today</p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Available Quantity</CardTitle>
+          <CardTitle className="text-sm font-medium">
+            Available Quantity
+          </CardTitle>
           <span className="text-sm text-muted-foreground">📦</span>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">{bcFormatter.format(props.supply)}</div>
+          <div className="text-2xl font-bold">
+            {bcFormatter.format(props.supply)}
+          </div>
           <p className="text-xs text-muted-foreground">Items in circulation</p>
         </CardContent>
       </Card>

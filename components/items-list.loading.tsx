@@ -14,7 +14,10 @@ export const ItemsListLoading = async () => {
       />
       <ScrollArea className="h-[400px] overflow-hidden">
         {Array.from({ length: 6 }).map((_, index) => (
-          <div key={index} className="w-full h-20 animate-pulse bg-gray-300 rounded-md mb-2" />
+          <div
+            key={index}
+            className="w-full h-20 animate-pulse bg-gray-300 rounded-md mb-2"
+          />
         ))}
       </ScrollArea>
     </div>

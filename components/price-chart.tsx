@@ -120,7 +120,7 @@ export function PriceChart(props: PriceChartProps) {
     (acc, curr) => {
       return [Math.min(acc[0], curr.low), Math.max(acc[1], curr.high)];
     },
-    [props.data[0]?.low ?? 0, props.data[0]?.high ?? 0]
+    [props.data[0]?.low ?? 0, props.data[0]?.high ?? 0],
   );
   return (
     <ChartContainer config={{}} className="min-h-[200px] w-full">

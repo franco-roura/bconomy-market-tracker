@@ -64,14 +64,14 @@ export default $config({
         BCONOMY_API_KEY: process.env.BCONOMY_API_KEY,
       },
     });
-    new sst.aws.Cron("LiveStatsWriterCron", {
+    new sst.aws.Cron("LiveStatsWriterCron0", {
       function: liveStatsWriterLambda.arn,
       schedule: "cron(2,32 * * * ? *)", // Runs twice an hour
       event: {
         batchNumber: "0",
       },
     });
-    new sst.aws.Cron("LiveStatsWriterCron", {
+    new sst.aws.Cron("LiveStatsWriterCron1", {
       function: liveStatsWriterLambda.arn,
       schedule: "cron(4,34 * * * ? *)", // Runs twice an hour
       event: {

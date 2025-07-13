@@ -61,15 +61,12 @@ export const ItemsList = (props: Props) => {
         onChange={(e) => setSearch(e.target.value)}
       />
       <ScrollArea className="h-[400px]">
-        <ItemCard
-          item={items[props.selectedItemId]}
-          selected
-        />
+        <ItemCard item={items[props.selectedItemId]} selected />
         {items
           .filter(
             (item) =>
               item.id !== props.selectedItemId &&
-              item.name.toLowerCase().includes(search.toLowerCase())
+              item.name.toLowerCase().includes(search.toLowerCase()),
           )
           .map((item) => (
             <ItemCard

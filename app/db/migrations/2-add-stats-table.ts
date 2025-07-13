@@ -1,15 +1,15 @@
-import { Kysely } from 'kysely';
+import { Kysely } from "kysely";
 
 export async function up(db: Kysely<unknown>): Promise<void> {
   await db.schema
-    .createTable('live_stats')
-    .addColumn('id', 'serial', (col) => col.primaryKey())
-    .addColumn('item_id', 'integer', (col) => col.notNull())
-    .addColumn('last_known_price', 'bigint', (col) => col.notNull())
-    .addColumn('opening_price', 'bigint', (col) => col.notNull())
-    .addColumn('highest_price_today', 'bigint', (col) => col.notNull())
-    .addColumn('lowest_price_today', 'bigint', (col) => col.notNull())
-    .addColumn('supply', 'bigint', (col) => col.notNull())
+    .createTable("live_stats")
+    .addColumn("id", "serial", (col) => col.primaryKey())
+    .addColumn("item_id", "integer", (col) => col.notNull())
+    .addColumn("last_known_price", "bigint", (col) => col.notNull())
+    .addColumn("opening_price", "bigint", (col) => col.notNull())
+    .addColumn("highest_price_today", "bigint", (col) => col.notNull())
+    .addColumn("lowest_price_today", "bigint", (col) => col.notNull())
+    .addColumn("supply", "bigint", (col) => col.notNull())
     .execute();
 
   await db.schema

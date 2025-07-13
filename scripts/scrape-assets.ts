@@ -26,7 +26,7 @@ for (const item of items) {
   if (elapsedTime < expectedTime) {
     const delay = expectedTime - elapsedTime;
     console.log(
-      `Rate limiting: waiting ${delay.toFixed(0)}ms before next request...`
+      `Rate limiting: waiting ${delay.toFixed(0)}ms before next request...`,
     );
     await new Promise((resolve) => setTimeout(resolve, delay));
   }
@@ -44,12 +44,15 @@ for (let i = 0; i < items.length; i++) {
   const inputPath = `public/assets/game/items/${i}.svg`;
   const outputPath = `public/assets/game/items/${i}.webp`;
   if (await Bun.file(inputPath).exists()) {
-      if (await Bun.file(outputPath).exists()) {
-        console.log(`Skipping ${i} because it already exists`);
-        continue;
-      }
+    if (await Bun.file(outputPath).exists()) {
+      console.log(`Skipping ${i} because it already exists`);
+      continue;
+    }
     const content = await Bun.file(inputPath).arrayBuffer();
-    await sharp(content).resize(275, 275).webp({ quality: 100 }).toFile(outputPath);
+    await sharp(content)
+      .resize(275, 275)
+      .webp({ quality: 100 })
+      .toFile(outputPath);
   }
 }
 
