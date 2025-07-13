@@ -49,6 +49,19 @@ export default $config({
         DB_URL: process.env.DB_URL,
       },
     });
+    // TODO cron
+    const liveStatsWriterLambda = new sst.aws.Function("LiveStatsWriter", {
+      runtime: "go",
+      handler: "./cron/live-stats-writer/main.go",
+      timeout: "15 seconds",
+      architecture: "arm64",
+      memory: "128 MB",
+      environment: {
+        DB_URL: process.env.DB_URL,
+        BCONOMY_API_KEY: process.env.BCONOMY_API_KEY,
+      },
+    });
+    // TODO cron
     new sst.aws.Nextjs("BconomyMarketTracker", {
       environment: {
         DB_URL: process.env.DB_URL,

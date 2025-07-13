@@ -9,6 +9,10 @@ declare module "sst" {
       "type": "sst.aws.Nextjs"
       "url": string
     }
+    "LiveStatsWriter": {
+      "name": string
+      "type": "sst.aws.Function"
+    }
     "MakeCandles": {
       "name": string
       "type": "sst.aws.Function"
