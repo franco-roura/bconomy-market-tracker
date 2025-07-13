@@ -1,5 +1,6 @@
 import { db } from "@/app/db/client";
 import { items } from "@/app/db/items";
+import { ItemStats } from "@/components/item-stats";
 import { ItemsList } from "@/components/items-list";
 import { ItemsListLoading } from "@/components/items-list.loading";
 import { PriceChart } from "@/components/price-chart";
@@ -83,8 +84,23 @@ export default async function Home(props: Props) {
           </CardContent>
         </Card>
       </div>
-
-      {/* <ItemStats item={selectedItem} /> */}
+      <ItemStats
+        itemId={itemIdInt}
+        lastKnownPrice={parseInt(currentPrices[currentPrices.length - 1].close)}
+        openingPrice={parseInt(currentPrices[0].open)}
+        highestPriceToday={currentPrices.reduce(
+          (max, price) => Math.max(max, parseInt(price.high)),
+          0
+        )}
+        lowestPriceToday={currentPrices.reduce(
+          (min, price) => Math.min(min, parseInt(price.low)),
+          0
+        )}
+        supply={currentPrices.reduce(
+          (sum, price) => sum + parseInt(price.close) * 1000,
+          0
+        )}
+      />
     </div>
   );
 }

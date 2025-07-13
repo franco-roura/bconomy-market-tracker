@@ -1,7 +1,7 @@
 "use client";
 
 import { ChartContainer } from "@/components/ui/chart";
-import { localizeUtc } from "@/lib/utils";
+import { bcFormatter, localizeUtc } from "@/lib/utils";
 import {
   CartesianGrid,
   ComposedChart,
@@ -25,11 +25,6 @@ type CandlestickData = {
 type PriceChartProps = {
   data: Array<CandlestickData>;
 };
-
-const bcFormatter = Intl.NumberFormat("en", {
-  notation: "compact",
-  minimumFractionDigits: 2,
-});
 
 // Custom candlestick shape for Scatter
 const CandlestickShape = (props: {

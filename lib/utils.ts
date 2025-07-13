@@ -13,3 +13,8 @@ export function localizeUtc(utcDate: number) {
   const adjustedDate = new Date(adjustedValue);
   return adjustedDate;
 }
+
+export const bcFormatter = Intl.NumberFormat("en", {
+  notation: "compact",
+  minimumFractionDigits: 2,
+});
