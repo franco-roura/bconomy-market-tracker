@@ -96,6 +96,7 @@ export function PriceChart(props: PriceChartProps) {
       const localString = new Date(label).toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
+        weekday: "long",
       });
       return (
         <div className="bg-white p-2 border rounded shadow">
